@@ -9,7 +9,7 @@ import footerLinks from '../../../apis/footerLinks';
 const d = new Date().getFullYear();
 
 const Container = styled.div`
-  background: ${props => props.theme.colors.black};
+  background: ${props => props.theme.colors.black2};
   color: ${props => props.theme.colors.white};
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -66,7 +66,6 @@ const SocialIcon = styled.a`
 `;
 
 const LinkColumnContainers = styled.div`
-  background: ${props => props.theme.colors.black};
   display: flex;
   flex-direction: column;
 
@@ -74,7 +73,6 @@ const LinkColumnContainers = styled.div`
 `;
 
 const LinkContainers = styled.div`
-  background: ${props => props.theme.colors.black};
   display: flex;
   flex-direction: column;
 
@@ -129,7 +127,7 @@ const Footer = () => {
               </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>Recipes </LinkHeaders>
+              <LinkHeaders>Site links </LinkHeaders>
               {footerLinks &&
                 footerLinks.map((link, i) => (
                   <CustomLinks key={i} to={`/${link.slug}`}>
@@ -159,7 +157,7 @@ const Footer = () => {
               </SocialIconContainer>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>We Cater</LinkHeaders>
+              <LinkHeaders>Aquasar Cafe</LinkHeaders>
               <CustomLinks to="/contact">Contact Us</CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
@@ -173,6 +171,9 @@ const Footer = () => {
               <CustomLinks to="/contact">Tell Us Which One</CustomLinks>
               <CustomLinks to="/contact">Report an issue</CustomLinks>
               <CustomLinks to="/privacy-policy">Privacy Policy</CustomLinks>
+              <CustomLinks to="/terms-and-conditions">
+                Terms & Conditions
+              </CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
         </MenuRHS>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { HomeSection } from './Section/ContentfulSection';
+import { HomeSection } from '../home/Section/ContentfulSection';
 
 const PrivacyPolicy = () => {
   const contentfulData = useStaticQuery(graphql`

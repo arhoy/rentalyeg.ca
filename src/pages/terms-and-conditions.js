@@ -9,14 +9,14 @@ import {
 
 import { ButtonStyle2 } from '../components/reusableStyles/buttons/Button';
 import NoStyleLink from '../components/Links/NoStyleLink';
-import PrivacyPolicy from '../components/legal/PrivacyPolicy';
+import TermsAndConditions from '../components/legal/TermsAndConditions';
 
 const DeliveryPage = () => {
   return (
     <Layout>
       <Section>
         <Container800>
-          <PrivacyPolicy />
+          <TermsAndConditions />
 
           <ButtonStyle2>
             <NoStyleLink to="/">Back to Home Page</NoStyleLink>

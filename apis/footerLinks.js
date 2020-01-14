@@ -10,6 +10,13 @@ const footerLinks = [
   },
   {
     id: 2,
+    title: 'Menu',
+    category: '',
+    description: 'Lorem Ipsum Lorem Contact',
+    slug: `menu`,
+  },
+  {
+    id: 3,
     title: 'Contact',
     category: '',
     description: 'Lorem Ipsum Lorem Contact',

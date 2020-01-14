@@ -13,16 +13,17 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: 'rgb(220,128,37)',
-    primaryDark: 'rgb(207, 113, 21)',
-    primaryLight: 'rgb(242, 146, 51)',
-    primaryVeryLight: 'rgb(244, 156, 124)',
+    primary: 'rgb(224, 152, 10)',
+    primaryDark: 'rgb(195, 131, 2)',
+    primaryLight: 'rgb(249, 190, 71)',
+    primaryVeryLight: 'rgb(253, 229, 179)',
     primaryTransparent: 'rgb(220,128,37,0.10)',
     secondary: 'rgb(24, 163, 201)',
     lightgrey: '#E0E0E0',
     lightgrey2: 'rgb(224, 217, 217)',
     white: '#F3F1F1',
     black: 'black',
+    black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
     darkGrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',

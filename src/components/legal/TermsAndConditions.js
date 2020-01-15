@@ -1,33 +1,23 @@
-// import React from 'react';
-// import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-// import { HomeSection } from '../home/Section/ContentfulSection';
+import { HomeSection } from '../home/Section/ContentfulSection';
 
-// const TermsAndConditions = () => {
-//   const contentfulData = useStaticQuery(graphql`
-//     {
-//       contentfulSectionSimple(
-//         id: { eq: "1c900398-0f29-54c6-aab2-e4133fc38d11" }
-//       ) {
-//         id
-//         title
-//         columnReverse
-//         subtitle {
-//           subtitle
-//         }
-//         pictures {
-//           fluid(maxWidth: 500) {
-//             ...GatsbyContentfulFluid_withWebp
-//           }
-//         }
-//         description {
-//           json
-//         }
-//       }
-//     }
-//   `);
+const TermsAndConditions = () => {
+  const contentfulData = useStaticQuery(graphql`
+    {
+      contentfulSection(id: { eq: "83cb8381-dbf1-5945-b661-7efe00d88212" }) {
+        id
+        title
+        subtitle
+        description {
+          json
+        }
+      }
+    }
+  `);
 
-//   return <HomeSection data={contentfulData.contentfulSectionSimple} />;
-// };
+  return <HomeSection data={contentfulData.contentfulSection} />;
+};
 
-// export default TermsAndConditions;
+export default TermsAndConditions;

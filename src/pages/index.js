@@ -6,17 +6,17 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Layout2 from '../components/layouts/Layout2';
-import {
-  Section,
-  SectionGrey,
-} from '../components/reusableStyles/sections/Sections';
+// import {
+//   Section,
+//   SectionGrey,
+// } from '../components/reusableStyles/sections/Sections';
 
-import AboutUs from '../components/home/AboutUs';
+// import AboutUs from '../components/home/AboutUs';
 
-import Catering from '../components/home/Catering';
-import Contact from '../components/home/Contact';
+// import Catering from '../components/home/Catering';
+// import Contact from '../components/home/Contact';
 
-import AboutOurFood from '../components/home/AboutOurFood';
+// import AboutOurFood from '../components/home/AboutOurFood';
 import { SectionHero } from '../components/home/SectionHero';
 
 export const query = graphql`

@@ -17,7 +17,7 @@ module.exports = {
     title: 'Cameroon Food Invite',
     description: 'Cameroon Food Invite, Authentic Cameroon Cuisine in Edmonton',
     author: 'Alex Quasar',
-    twitterUsername: '@_aquasar',
+    twitterUsername: '@_RentalYEG',
     image: '/default.png',
     siteUrl: URL,
   },
@@ -41,12 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Merienda\:300,500,700`,
-          `Sacramento`,
-          `Montserrat`,
-          `Parisienne`,
-        ],
+        fonts: [`Lobster\:300,500,700`, `Montserrat\:300 500 700`],
         display: 'swap',
       },
     },

@@ -1,7 +1,7 @@
 {
-  "name": "smallbusinesstemplate",
+  "name": "rentalyeg",
   "private": true,
-  "description": "Official repo for template for small site with contentful",
+  "description": "Rental YEG",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -84,6 +84,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arhoy/CameroonStreetFood.com"
+    "url": "https://github.com/arhoy/rentalyeg.com"
   }
 }

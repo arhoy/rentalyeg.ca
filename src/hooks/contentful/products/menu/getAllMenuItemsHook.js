@@ -1,21 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const GetAllMenusHook = () => {
+const GetAllPropertiesHook = () => {
   const data = useStaticQuery(graphql`
     {
-      allItems: allContentfulMenuItems {
+      allItems: allContentfulProperties {
         nodes {
           id
           title
           slug
-          subtitle {
-            subtitle
-          }
-          category
-          subcategory
+          subtitle
           pictures {
-            fluid(quality: 90, maxWidth: 300) {
-              ...GatsbyContentfulFluid_withWebp
+            fluid(quality: 90, maxWidth: 1000) {
+              src
             }
           }
         }
@@ -28,4 +24,4 @@ const GetAllMenusHook = () => {
   return items;
 };
 
-export default GetAllMenusHook;
+export default GetAllPropertiesHook;

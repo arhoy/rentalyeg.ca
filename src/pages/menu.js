@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/layouts/Layout';
-import GetAllMenusHook from '../hooks/contentful/products/menu/getAllMenuItemsHook';
+import GetAllPropertiesHook from '../hooks/contentful/products/menu/getAllMenuItemsHook';
 import MenuItem from '../components/menuItemContentful/MenuItem';
 import {
   Section,
@@ -23,7 +23,7 @@ const RecipeLayoutCustom = styled(ContainerCenterFlex)`
 `;
 
 const menu = () => {
-  const data = GetAllMenusHook();
+  const data = GetAllPropertiesHook();
   return (
     <Layout>
       <SectionTitleCustom>

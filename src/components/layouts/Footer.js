@@ -157,14 +157,14 @@ const Footer = () => {
               </SocialIconContainer>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>Aquasar Cafe</LinkHeaders>
+              <LinkHeaders>RentalYEG </LinkHeaders>
               <CustomLinks to="/contact">Contact Us</CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
           <LinkColumnContainers>
             <LinkContainers>
               <LinkHeaders>Email Us</LinkHeaders>
-              <LinkDescription>aquasar2020@gmail.com</LinkDescription>
+              <LinkDescription>RentalYEG2020@gmail.com</LinkDescription>
             </LinkContainers>
             <LinkContainers>
               <LinkHeaders>Can't Find Your Dish?</LinkHeaders>
@@ -181,8 +181,12 @@ const Footer = () => {
 
       <Attribution>
         Created by{' '}
-        <A target="_blank" rel="noopener noreferrer" href="https://aquasar.io/">
-          Aquasar.io {d} &copy;
+        <A
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://RentalYEG.io/"
+        >
+          RentalYEG.io {d} &copy;
         </A>
       </Attribution>
     </Container>

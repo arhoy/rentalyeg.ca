@@ -6,7 +6,6 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import Nav from '../navigation/Nav';
-import Footer from './Footer';
 
 // real global scss styles
 import '../../scss/main.scss';
@@ -90,15 +89,7 @@ const MainFull = styled.main`
   grid-column: full-start/full-end;
 `;
 
-const FooterLayout = styled.footer`
-  grid-column: center-start/center-end;
-`;
-
-const FullFooterLayout = styled.footer`
-  grid-column: full-start/full-end;
-`;
-
-const Layout = ({ children, full }) => {
+const Layout2 = ({ children, full }) => {
   const bodyColor = 'rgb(38, 34, 27)';
 
   return (
@@ -125,9 +116,6 @@ const Layout = ({ children, full }) => {
               <Nav />
             </FullNavLayout>
             <MainFull>{children}</MainFull>
-            <FullFooterLayout>
-              <Footer />
-            </FullFooterLayout>
           </Div>
         </ThemeProvider>
       ) : (
@@ -138,19 +126,16 @@ const Layout = ({ children, full }) => {
           <DivFixed>
             <Main>{children}</Main>
           </DivFixed>
-          <FooterLayout>
-            <Footer />
-          </FooterLayout>
         </ThemeProvider>
       )}
     </>
   );
 };
-Layout.propTypes = {
+Layout2.propTypes = {
   full: PropTypes.bool,
 };
-Layout.defaultProps = {
+Layout2.defaultProps = {
   full: true,
 };
 
-export default Layout;
+export default Layout2;

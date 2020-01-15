@@ -23,11 +23,13 @@ const ProductPageH1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: 3rem;
+  font-family: Lobster;
   color: ${props => props.theme.colors.black};
 `;
 
 const H2Centered = styled(H2)`
   text-align: center;
+
   margin: 2rem 0;
 `;
 

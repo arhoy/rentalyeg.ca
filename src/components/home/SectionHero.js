@@ -11,7 +11,7 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
-  height: 100vh;
+  height: 92vh;
   margin-top: -2rem;
   grid-gap: 1rem;
   grid-column-gap: 2rem;
@@ -28,7 +28,7 @@ const Container = styled.div`
 
 export const SectionHero = () => {
   const data = GetAllPropertiesHook();
-  console.log('Data is ', data);
+
   return (
     <Container>
       {data.slice(0, 4).map((item, i) => (

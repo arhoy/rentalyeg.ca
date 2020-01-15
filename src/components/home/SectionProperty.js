@@ -5,12 +5,13 @@ import Image from 'gatsby-image';
 import NoStyleLink from '../Links/NoStyleLink';
 
 const Title = styled(NoStyleLink)`
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   text-transform: uppercase;
   text-align: center;
   opacity: 0;
   position: absolute;
   color: ${props => props.theme.colors.white};
+  font-family: Lobster;
   z-index: 3;
   top: 50%;
   left: 50%;
@@ -21,8 +22,8 @@ const Title = styled(NoStyleLink)`
 `;
 
 const CustomImage = styled(Image)`
-  object-fit: cover;
-  height: 49vh;
+  object-fit: contain;
+  height: 46vh;
   width: 100%;
 
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
@@ -38,8 +39,8 @@ const Container = styled.div`
   cursor: pointer;
   &:hover {
     ${CustomImage} {
-      filter: brightness(50%);
-      -webkit-filter: brightness(50%);
+      filter: brightness(30%);
+      -webkit-filter: brightness(30%);
       -webkit-transition: all 1s ease;
     }
 

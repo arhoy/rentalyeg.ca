@@ -12,7 +12,9 @@ import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
 import NoStyleLink from '../Links/NoStyleLink';
 
 const Header = styled.header`
-  height: 80px;
+  font-family: Lobster;
+  font-weight: bold;
+  height: 8vh;
   position: relative;
 
   background: ${props => props.theme.colors.black};
@@ -45,10 +47,12 @@ const Logo = styled.div`
 const LogoLink = styled(Link)`
   display: flex;
   flex-direction: column;
-  font-size: 2.9rem;
+  font-family: Lobster;
+  font-weight: bold;
+  font-size: 2rem;
   padding: 0;
   margin: 0;
-
+  color: ${props => props.theme.colors.white};
   text-decoration: none !important;
 `;
 
@@ -80,10 +84,13 @@ const CustomButtonStyle2 = styled(ButtonStyle2)`
 const CustomLink = styled(NoStyleLink)`
   color: ${props => props.theme.colors.white};
   height: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 1rem;
   & :hover {
     background: ${props => props.theme.colors.primary};
+  }
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    padding: 1.3rem;
   }
 `;
 
@@ -116,6 +123,7 @@ const NavSuperStore1 = () => {
         <Logo>
           <LogoLink to="/">
             <LogoImage src={image.sharp.fluid.src} />
+            Rental YEG
           </LogoLink>
         </Logo>
 

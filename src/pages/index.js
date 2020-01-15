@@ -35,19 +35,6 @@ const Home = ({ data }) => {
   return (
     <Layout2 full={true}>
       <SectionHero />
-
-      {/* <SectionGrey>
-        <AboutUs />
-      </SectionGrey>
-      <Section>
-        <AboutOurFood />
-      </Section>
-      <SectionGrey>
-        <Catering />
-      </SectionGrey>
-      <Section>
-        <Contact />
-      </Section> */}
     </Layout2>
   );
 };

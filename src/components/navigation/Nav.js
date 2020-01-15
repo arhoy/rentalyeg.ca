@@ -17,7 +17,11 @@ const Header = styled.header`
   height: 8vh;
   position: relative;
 
-  background: ${props => props.theme.colors.black};
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.colors.black},
+    ${props => props.theme.colors.black2}
+  );
   color: ${props => props.theme.colors.white};
 
   display: flex;

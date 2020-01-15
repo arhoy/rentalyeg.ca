@@ -13,9 +13,9 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: 'rgb(224, 152, 10)',
-    primaryDark: 'rgb(195, 131, 2)',
-    primaryLight: 'rgb(249, 190, 71)',
+    primary: 'rgb(20, 149, 208)',
+    primaryDark: 'rgb(12, 93, 130)',
+    primaryLight: 'rgb(124, 201, 237)',
     primaryVeryLight: 'rgb(253, 229, 179)',
     primaryTransparent: 'rgb(220,128,37,0.10)',
     secondary: 'rgb(24, 163, 201)',

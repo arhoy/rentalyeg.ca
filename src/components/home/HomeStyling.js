@@ -35,12 +35,10 @@ const StyledImage = styled(Image)`
 `;
 
 const CustomP = styled(PBasic)`
-  font-family: Lobster;
   font-size: 2.2rem;
 `;
 
 const CustomPHome = styled(PBasic)`
-  font-family: Open Sans;
   font-size: 1.7rem;
   line-height: 2.5rem;
 `;
@@ -48,7 +46,7 @@ const CustomPHome = styled(PBasic)`
 const CustomH2 = styled(H2)`
   color: ${props => props.theme.colors.primary};
   margin-bottom: 1rem;
-  font-family: Lobster;
+
   font-size: 4rem;
 `;
 

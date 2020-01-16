@@ -26,7 +26,7 @@ const Title = styled(H1)`
 
 const Description = styled(PBasic)`
   font-size: 1.8rem;
-  font-family: Montserrat;
+
   &:before {
     content: '"';
   }

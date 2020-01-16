@@ -167,8 +167,7 @@ const Footer = () => {
               <LinkDescription>RentalYEG2020@gmail.com</LinkDescription>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>Can't Find Your Dish?</LinkHeaders>
-              <CustomLinks to="/contact">Tell Us Which One</CustomLinks>
+              <LinkHeaders>Rent Seekers</LinkHeaders>
               <CustomLinks to="/contact">Report an issue</CustomLinks>
               <CustomLinks to="/privacy-policy">Privacy Policy</CustomLinks>
               <CustomLinks to="/terms-and-conditions">

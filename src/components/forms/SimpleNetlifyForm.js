@@ -29,7 +29,7 @@ const Label = styled.label`
     outline: none;
     border: none;
     border-bottom: 1px solid ${props => props.theme.colors.primaryDark};
-    font-family: Poppins, Roboto;
+
     font-size: 1.6rem;
   }
 `;

@@ -7,11 +7,12 @@ import NoStyleLink from '../Links/NoStyleLink';
 const Title = styled(NoStyleLink)`
   font-size: 3.4rem;
   text-transform: uppercase;
+  letter-spacing: 5px;
   text-align: center;
   opacity: 0;
   position: absolute;
   color: ${props => props.theme.colors.white};
-  font-family: Lobster;
+
   z-index: 3;
   top: 50%;
   left: 50%;
@@ -51,8 +52,12 @@ const Container = styled.div`
 `;
 
 export const SectionProperty = ({ item, number }) => {
+  const onPropertyClickHandler = () => {
+    console.log('I was clicked');
+  };
+
   return (
-    <Container number={number}>
+    <Container onClick={onPropertyClickHandler} number={number}>
       <Title to={`/${item.slug}`}>{item.title}</Title>
       <CustomImage fluid={item.pictures[0].fluid} />
     </Container>

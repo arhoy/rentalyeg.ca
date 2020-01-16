@@ -14,7 +14,7 @@ import NoStyleLink from '../Links/NoStyleLink';
 const Header = styled.header`
   font-family: Lobster;
   font-weight: bold;
-  height: 8vh;
+  height: 9vh;
   position: relative;
 
   background: linear-gradient(
@@ -51,13 +51,15 @@ const Logo = styled.div`
 const LogoLink = styled(Link)`
   display: flex;
   flex-direction: column;
-  font-family: Lobster;
   font-weight: bold;
   font-size: 2rem;
   padding: 0;
   margin: 0;
   color: ${props => props.theme.colors.white};
   text-decoration: none !important;
+  & span {
+    transform: translateY(-4px);
+  }
 `;
 
 const NavContainer = styled.nav`
@@ -100,6 +102,8 @@ const CustomLink = styled(NoStyleLink)`
 
 const LogoImage = styled.img`
   max-height: 80px;
+  transform: translateY(8px);
+  opacity: 0.7;
 `;
 
 const NavSuperStore1 = () => {
@@ -127,7 +131,7 @@ const NavSuperStore1 = () => {
         <Logo>
           <LogoLink to="/">
             <LogoImage src={image.sharp.fluid.src} />
-            Rental YEG
+            <span>Rental YEG</span>
           </LogoLink>
         </Logo>
 

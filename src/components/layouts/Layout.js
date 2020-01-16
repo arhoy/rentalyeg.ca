@@ -99,7 +99,7 @@ const FullFooterLayout = styled.footer`
 `;
 
 const Layout = ({ children, full }) => {
-  const bodyColor = 'rgb(38, 34, 27)';
+  const bodyColor = '#F7F6F6';
 
   return (
     <>
@@ -113,7 +113,7 @@ const Layout = ({ children, full }) => {
           body {
             background: ${bodyColor};
             margin: 0;
-            font-family: Merienda, Cursive, Helvetica, Arial, sans-serif;
+            font-family: Montserrat, Helvetica, Arial, sans-serif;
           }
         `}
       />

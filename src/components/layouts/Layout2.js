@@ -104,7 +104,7 @@ const Layout2 = ({ children, full }) => {
           body {
             background: ${bodyColor};
             margin: 0;
-            font-family: Merienda, Cursive, Helvetica, Arial, sans-serif;
+            font-family: Montserrat, Helvetica, Arial, sans-serif;
           }
         `}
       />

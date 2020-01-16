@@ -27,7 +27,7 @@ const DropDownContent = styled.div`
 
 const Title = styled.span`
   font-weight: bolder;
-  font-family: Merienda;
+
   cursor: pointer;
   color: ${props => props.color || props.theme.colors.white};
   &:hover {

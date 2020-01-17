@@ -9,8 +9,8 @@ const WestparkridgeHook = () => {
         subtitle
         subtitle
         pictures {
-          fluid(maxWidth: 500) {
-            src
+          fluid(quality: 90, maxWidth: 1000) {
+            ...GatsbyContentfulFluid_withWebp
           }
         }
         description {

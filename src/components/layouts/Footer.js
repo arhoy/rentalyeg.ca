@@ -123,7 +123,7 @@ const Footer = () => {
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
               <LinkHeadersPrimary style={{ marginBottom: '-0.5rem' }}>
-                587-772-5536
+                780.756.7411
               </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>

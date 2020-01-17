@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { SectionProperty } from './SectionProperty';
-import GetAllPropertiesHook from '../../hooks/contentful/products/menu/getAllMenuItemsHook';
+import GetAllPropertiesHook from '../../hooks/contentful/properties/GetAllPropertiesHook';
 
 const Container = styled.div`
   background: ${props => props.theme.colors.black2};
@@ -31,7 +31,7 @@ export const SectionHero = () => {
 
   return (
     <Container>
-      {data.slice(0, 4).map((item, i) => (
+      {data.map((item, i) => (
         <SectionProperty key={item.id} item={item} number={i} />
       ))}
     </Container>

@@ -11,7 +11,7 @@ const GetAllPropertiesHook = () => {
           subtitle
           pictures {
             fluid(quality: 90, maxWidth: 1000) {
-              src
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

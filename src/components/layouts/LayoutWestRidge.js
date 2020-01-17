@@ -21,8 +21,8 @@ const theme = {
     secondary: 'rgb(24, 163, 201)',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
-    white: '#F9F9F9',
-    black: 'rgb(19, 20, 21)',
+    white: '#F3F1F1',
+    black: '#484848',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
     darkGrey: 'rgb(109, 109, 109)',
@@ -49,6 +49,7 @@ const theme = {
 };
 
 const Div = styled.div`
+color: ${props => props.theme.colors.black2};
   overflow-x: hidden;
   display: grid;
   grid-template-columns:
@@ -66,6 +67,7 @@ const Div = styled.div`
 `;
 
 const DivFixed = styled.div`
+color: ${props => props.theme.colors.black2};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -98,8 +100,8 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const Layout = ({ children, full }) => {
-  const bodyColor = '#F9F9F9';
+const LayoutWestRidge = ({ children, full }) => {
+  const bodyColor = '#F7F6F6';
 
   return (
     <>
@@ -115,6 +117,7 @@ const Layout = ({ children, full }) => {
             margin: 0;
             font-family: Montserrat, Helvetica, Arial, sans-serif;
           }
+
         `}
       />
 
@@ -146,11 +149,11 @@ const Layout = ({ children, full }) => {
     </>
   );
 };
-Layout.propTypes = {
+LayoutWestRidge.propTypes = {
   full: PropTypes.bool,
 };
-Layout.defaultProps = {
+LayoutWestRidge.defaultProps = {
   full: true,
 };
 
-export default Layout;
+export default LayoutWestRidge;

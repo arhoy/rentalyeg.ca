@@ -13,7 +13,7 @@ import {
   SectionGrey,
   Container1200,
 } from '../components/reusableStyles/sections/Sections.js';
-import { NetlifyFormV2 } from '../components/forms/NetlifyFormV2';
+
 import Map1 from '../components/mapbox/Map1';
 
 const SectionCustom = styled(SectionGrey)`

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
-import socialIcons from '../../constants/socialIcons';
+import { FaFacebookSquare } from 'react-icons/fa';
 import NoStyleLink from '../Links/NoStyleLink';
 import { NetlifyFormV2 } from '../forms/NetlifyFormV2';
 import footerLinks from '../../../apis/footerLinks';
@@ -111,7 +110,7 @@ const Attribution = styled.p`
   text-transform: uppercase;
 `;
 
-const Footer = () => {
+const FooterWestRidge = () => {
   return (
     <Container>
       <Menu>
@@ -123,11 +122,11 @@ const Footer = () => {
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
               <LinkHeadersPrimary style={{ marginBottom: '-0.5rem' }}>
-                780.756.7411
+                780.306.2335
               </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>Site links </LinkHeaders>
+              <LinkHeaders>Site links</LinkHeaders>
               {footerLinks &&
                 footerLinks.map((link, i) => (
                   <CustomLinks key={i} to={`/${link.slug}`}>
@@ -144,16 +143,13 @@ const Footer = () => {
             <LinkContainers>
               <LinkHeaders>Follow Us</LinkHeaders>
               <SocialIconContainer>
-                {socialIcons.map(icon => (
-                  <SocialIcon
-                    key={icon.url}
-                    href={icon.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {icon.icon}
-                  </SocialIcon>
-                ))}
+                <SocialIcon
+                  href={`https://www.facebook.com/Westpark-Ridge-Community-102976637840998/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookSquare />
+                </SocialIcon>
               </SocialIconContainer>
             </LinkContainers>
             <LinkContainers>
@@ -188,4 +184,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterWestRidge;

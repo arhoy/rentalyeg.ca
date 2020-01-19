@@ -22,9 +22,13 @@ const ProductPageH1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: Lobster;
   color: ${props => props.theme.colors.black};
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    text-align: center;
+    font-size: 3rem;
+  }
 `;
 
 const H2Centered = styled(H2)`
@@ -72,9 +76,10 @@ const Span = styled.span``;
 
 const P = styled.p`
   padding: 1rem 0rem;
-  font-family: Montserrat, Arial;
+  font-family: Montserrat, Roboto, Arial;
   line-height: 2.4rem;
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.8rem;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     text-align: center;
   }

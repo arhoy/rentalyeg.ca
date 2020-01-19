@@ -5,8 +5,8 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import Nav from '../navigation/Nav';
-import Footer from './Footer';
+import WestParkRidgeNav from '../navigation/WestParkRidgeNav';
+import FooterWestRidge from './FooterWestRidge';
 
 // real global scss styles
 import '../../scss/main.scss';
@@ -21,7 +21,7 @@ const theme = {
     secondary: 'rgb(24, 163, 201)',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
-    white: '#F3F1F1',
+    white: 'white',
     black: '#484848',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
@@ -49,7 +49,7 @@ const theme = {
 };
 
 const Div = styled.div`
-color: ${props => props.theme.colors.black2};
+  color: ${props => props.theme.colors.black2};
   overflow-x: hidden;
   display: grid;
   grid-template-columns:
@@ -67,7 +67,7 @@ color: ${props => props.theme.colors.black2};
 `;
 
 const DivFixed = styled.div`
-color: ${props => props.theme.colors.black2};
+  color: ${props => props.theme.colors.black2};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,7 +101,7 @@ const FullFooterLayout = styled.footer`
 `;
 
 const LayoutWestRidge = ({ children, full }) => {
-  const bodyColor = '#F7F6F6';
+  const bodyColor = 'white';
 
   return (
     <>
@@ -117,7 +117,6 @@ const LayoutWestRidge = ({ children, full }) => {
             margin: 0;
             font-family: Montserrat, Helvetica, Arial, sans-serif;
           }
-
         `}
       />
 
@@ -125,24 +124,24 @@ const LayoutWestRidge = ({ children, full }) => {
         <ThemeProvider theme={theme}>
           <Div>
             <FullNavLayout>
-              <Nav />
+              <WestParkRidgeNav />
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
-              <Footer />
+              <FooterWestRidge />
             </FullFooterLayout>
           </Div>
         </ThemeProvider>
       ) : (
         <ThemeProvider theme={theme}>
           <NavLayout>
-            <Nav />
+            <WestParkRidgeNav />
           </NavLayout>
           <DivFixed>
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <Footer />
+            <FooterWestRidge />
           </FooterLayout>
         </ThemeProvider>
       )}

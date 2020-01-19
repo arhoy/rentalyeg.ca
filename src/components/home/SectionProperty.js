@@ -52,9 +52,7 @@ const Container = styled.div`
 `;
 
 export const SectionProperty = ({ item, number }) => {
-  const onPropertyClickHandler = () => {
-    console.log('I was clicked');
-  };
+  const onPropertyClickHandler = () => {};
 
   return (
     <Container onClick={onPropertyClickHandler} number={number}>

@@ -21,7 +21,7 @@ const theme = {
     secondary: 'rgb(24, 163, 201)',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
-    white: '#F9F9F9',
+    white: '#FFFFFF',
     black: 'rgb(19, 20, 21)',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',

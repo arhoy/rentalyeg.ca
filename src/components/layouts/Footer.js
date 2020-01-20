@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import socialIcons from '../../constants/socialIcons';
+
 import NoStyleLink from '../Links/NoStyleLink';
 import { NetlifyFormV2 } from '../forms/NetlifyFormV2';
 import footerLinks from '../../../apis/footerLinks';
@@ -58,12 +58,7 @@ const MenuRHS = styled.div`
     text-align: center;
   }
 `;
-const SocialIconContainer = styled.div``;
-const SocialIcon = styled.a`
-  color: ${props => props.theme.colors.lightgrey};
-  font-size: 3rem;
-  margin-right: 1rem;
-`;
+
 
 const LinkColumnContainers = styled.div`
   display: flex;
@@ -87,14 +82,7 @@ const LinkHeaders = styled.h6`
   font-weight: 700;
   margin-bottom: 1rem;
 `;
-const LinkHeadersPrimary = styled(LinkHeaders)`
-  color: ${props => props.theme.colors.primaryLight};
-  font-size: 2.5rem;
-  font-weight: 500;
-`;
-const LinkDescription = styled.p`
-  color: ${props => props.theme.colors.primaryLight};
-`;
+
 
 const CustomLinks = styled(NoStyleLink)`
   color: ${props => props.theme.colors.lightgrey};
@@ -120,12 +108,12 @@ const Footer = () => {
         </MenuLHS>
         <MenuRHS>
           <LinkColumnContainers>
-            <LinkContainers>
-              <LinkHeaders>Text Or Call</LinkHeaders>
-              <LinkHeadersPrimary style={{ marginBottom: '-0.5rem' }}>
+            {/* <LinkContainers> */}
+            {/* <LinkHeaders>Text Or Call</LinkHeaders> */}
+            {/* <LinkHeadersPrimary style={{ marginBottom: '-0.5rem' }}>
                 780.756.7411
-              </LinkHeadersPrimary>
-            </LinkContainers>
+              </LinkHeadersPrimary> */}
+            {/* </LinkContainers> */}
             <LinkContainers>
               <LinkHeaders>Site links </LinkHeaders>
               {footerLinks &&
@@ -141,7 +129,7 @@ const Footer = () => {
             </LinkContainers>
           </LinkColumnContainers>
           <LinkColumnContainers>
-            <LinkContainers>
+            {/* <LinkContainers>
               <LinkHeaders>Follow Us</LinkHeaders>
               <SocialIconContainer>
                 {socialIcons.map(icon => (
@@ -155,17 +143,17 @@ const Footer = () => {
                   </SocialIcon>
                 ))}
               </SocialIconContainer>
-            </LinkContainers>
+            </LinkContainers> */}
             <LinkContainers>
               <LinkHeaders>RentalYEG </LinkHeaders>
               <CustomLinks to="/contact">Contact Us</CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
           <LinkColumnContainers>
-            <LinkContainers>
+            {/* <LinkContainers>
               <LinkHeaders>Email Us</LinkHeaders>
               <LinkDescription>RentalYEG2020@gmail.com</LinkDescription>
-            </LinkContainers>
+            </LinkContainers> */}
             <LinkContainers>
               <LinkHeaders>Rent Seekers</LinkHeaders>
               <CustomLinks to="/contact">Report an issue</CustomLinks>

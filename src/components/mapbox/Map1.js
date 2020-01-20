@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-import storeLocations from './data/fashionStoreCoordinates';
+import storeLocations from './data/mapData';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { SimpleAlertPrimary } from '../reusableStyles/alerts/SimpleAlerts';
 import { Bold, P, H2 } from '../reusableStyles/typography/Typography';
@@ -20,11 +20,11 @@ const SelectionHighlight = styled.div`
 
 const Map1 = ({ title, mapStyle, height, width }) => {
   const [viewport, setViewport] = useState({
-    latitude: 53,
-    longitude: -113,
+    latitude: 53.558542,
+    longitude: -113.5376507,
     width: width,
     height: height,
-    zoom: 4,
+    zoom: 8,
   });
 
   const [selected, setSelected] = useState(null);
@@ -81,9 +81,9 @@ const Map1 = ({ title, mapStyle, height, width }) => {
       {selected && (
         <SelectionHighlight>
           <SimpleAlertPrimary>
-            <P>
+            <span>
               This is the <Bold>{selected.name} </Bold> location
-            </P>
+            </span>
           </SimpleAlertPrimary>
         </SelectionHighlight>
       )}

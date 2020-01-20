@@ -7,7 +7,7 @@ import { FaAlignRight } from 'react-icons/fa';
 import styled from '@emotion/styled';
 
 import { MobileMenu1 } from '../menus-mobile/Main/MobileMenu1';
-import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
+
 
 import NoStyleLink from '../Links/NoStyleLink';
 
@@ -58,6 +58,11 @@ const LogoLink = styled(Link)`
   margin: 0;
   color: ${props => props.theme.colors.white};
   text-decoration: none !important;
+  & span {
+    color: ${props => props.theme.colors.primaryLight};
+    font-size: 3rem;
+    display: inline;
+  }
 `;
 
 const NavContainer = styled.nav`
@@ -80,10 +85,7 @@ const BurgerIcon = styled(FaAlignRight)`
   }
 `;
 
-const CustomButtonStyle2 = styled(ButtonStyle2)`
-  font-size: 1.6rem;
-  display: flex;
-`;
+
 
 const CustomLink = styled(NoStyleLink)`
   color: ${props => props.theme.colors.white};
@@ -121,12 +123,16 @@ const Nav = () => {
     <>
       <Header>
         <Logo>
-          <LogoLink to="/">Rental YEG</LogoLink>
+          <LogoLink to="/">
+            <div>
+              <span>R</span>ENTAL <span>Y</span>EG
+            </div>
+          </LogoLink>
         </Logo>
 
         <NavContainer>
           <CustomLink to="/">Home </CustomLink>
-          <CustomLink to="/properties">Properties </CustomLink>
+
           <CustomLink to="/contact">Contact </CustomLink>
 
           {/* <MyMenu3 color={'white'} title={`Recipes`}>
@@ -137,9 +143,9 @@ const Nav = () => {
             </Container1200>
           </MyMenu3> */}
 
-          <CustomButtonStyle2>
+          {/* <CustomButtonStyle2>
             <a href="tel:587-772-5536">587-772-5536</a>
-          </CustomButtonStyle2>
+          </CustomButtonStyle2> */}
         </NavContainer>
 
         <BurgerIcon onClick={mobileMenuHandler} />

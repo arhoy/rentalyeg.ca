@@ -4,6 +4,9 @@ import Slider from 'react-slick';
 
 import Image from 'gatsby-image';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import LayoutWestRidge from '../components/layouts/LayoutWestRidge';
 
 import WestparkridgeHook from '../hooks/contentful/properties/WestparkridgeHook';

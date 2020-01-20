@@ -112,7 +112,7 @@ const contact = ({ data }) => {
         <Container1200>
           <Map1
             title={`Our Locations`}
-            mapStyle="mapbox://styles/arhoy/ck2ktklfm3o8b1co185ptfskc"
+            mapStyle="mapbox://styles/arhoy/ck5n2qqyf0i0v1inwxwapkl7c"
             width="100%"
             height="50vh"
           />

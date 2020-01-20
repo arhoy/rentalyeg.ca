@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 import Image from 'gatsby-image';
 
 import LayoutWestRidge from '../components/layouts/LayoutWestRidge';
@@ -181,8 +180,6 @@ const WestParkRidge = () => {
       </SectionGrey>
       <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
         <ImageContainerSlider>
-          {/* mapping currently does not work with react slick */}
-
           <Slider {...settings}>
             {pictures.map((image, i) => (
               <SliderContainer2 key={i}>

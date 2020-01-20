@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+// import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 
 import { FaAlignRight } from 'react-icons/fa';
@@ -50,16 +50,14 @@ const Logo = styled.div`
 `;
 const LogoLink = styled(Link)`
   display: flex;
+
   flex-direction: column;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 0;
   margin: 0;
   color: ${props => props.theme.colors.white};
   text-decoration: none !important;
-  & span {
-    transform: translateY(-4px);
-  }
 `;
 
 const NavContainer = styled.nav`
@@ -100,24 +98,18 @@ const CustomLink = styled(NoStyleLink)`
   }
 `;
 
-const LogoImage = styled.img`
-  max-height: 80px;
-  transform: translateY(8px);
-  opacity: 0.7;
-`;
-
-const NavSuperStore1 = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "Logo.png" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 600) {
-            src
-          }
-        }
-      }
-    }
-  `);
+const Nav = () => {
+  // const { image } = useStaticQuery(graphql`
+  //   query {
+  //     image: file(relativePath: { eq: "Logo.png" }) {
+  //       sharp: childImageSharp {
+  //         fluid(maxWidth: 600) {
+  //           src
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
   const [mobileMenuOpen, setMobileMenu] = useState(false);
 
@@ -129,10 +121,7 @@ const NavSuperStore1 = () => {
     <>
       <Header>
         <Logo>
-          <LogoLink to="/">
-            <LogoImage src={image.sharp.fluid.src} />
-            <span>Rental YEG</span>
-          </LogoLink>
+          <LogoLink to="/">Rental YEG</LogoLink>
         </Logo>
 
         <NavContainer>
@@ -162,4 +151,4 @@ const NavSuperStore1 = () => {
   );
 };
 
-export default NavSuperStore1;
+export default Nav;

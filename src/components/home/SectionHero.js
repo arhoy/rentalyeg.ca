@@ -31,9 +31,28 @@ export const SectionHero = () => {
 
   return (
     <Container>
-      {data.map((item, i) => (
-        <SectionProperty key={item.id} item={item} number={i} />
-      ))}
+      {/* {data.map((item, i) => (
+        <SectionProperty key={item.id} item={item} number={i}  />
+      ))} */}
+      <SectionProperty key={0} item={data[0]} number={0} />
+      <SectionProperty
+        key={1}
+        item={data[1]}
+        number={1}
+        url={`https://wwt.managebuilding.com/Resident/public/home`}
+      />
+      <SectionProperty
+        key={2}
+        item={data[2]}
+        number={2}
+        url={`https://livetreo.managebuilding.com/Resident/public/home`}
+      />
+      <SectionProperty
+        key={3}
+        item={data[3]}
+        number={3}
+        url={`http://bluequillapartments.ca/`}
+      />
     </Container>
   );
 };

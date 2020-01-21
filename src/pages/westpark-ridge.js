@@ -28,6 +28,7 @@ import { LayoutComponent2 } from '../components/reusableStyles/propertySectionLa
 import SliderContainer2 from '../components/reusableStyles/slider/SliderContainer2';
 import ContentfulPropertyReviews from '../components/reviews/ContentfulPropertyReviews';
 import { TagContainer, Tag } from '../components/reusableStyles/tags/Tag';
+import { LayoutComponent3 } from '../components/reusableStyles/propertySectionLayouts/LayoutComponent3';
 
 const ImageContainerSlider = styled.div``;
 
@@ -200,11 +201,11 @@ const WestParkRidge = () => {
         </Container1200>
       </SectionGrey>
       <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
-        <ContainerCenterFlex>
+        <Container1200>
           {propertyFeatures.map((item, i) => (
-            <LayoutComponent2 key={i} title={item} />
+            <LayoutComponent3 key={i} title={item} />
           ))}
-        </ContainerCenterFlex>
+        </Container1200>
       </Section>
       <SectionGrey>
         <Container1200>

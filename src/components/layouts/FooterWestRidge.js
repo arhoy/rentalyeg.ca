@@ -175,9 +175,12 @@ const FooterWestRidge = () => {
       </Menu>
 
       <Attribution>
-        Created by{' '}
-        <A target="_blank" rel="noopener noreferrer" href="https://Aquasar.io/">
-          Aquasar.io {d} &copy;
+        <A
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://rentalyeg.com/"
+        >
+          Rental YEG {d} &copy;
         </A>
       </Attribution>
     </Container>

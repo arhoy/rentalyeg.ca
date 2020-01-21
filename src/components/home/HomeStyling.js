@@ -21,7 +21,9 @@ const ImageContainerSlider = styled.div`
   max-width: 50rem;
 `;
 
-const BlurbContainer = styled.div``;
+const BlurbContainer = styled.div`
+  margin: 0 3rem;
+`;
 
 const StyledImage = styled(Image)`
   min-width: 35rem;
@@ -30,7 +32,8 @@ const StyledImage = styled(Image)`
   margin: 0 auto;
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     margin-top: 2rem;
-    width: 100%;
+    min-width: 100vw;
+    height: 40rem;
   }
 `;
 

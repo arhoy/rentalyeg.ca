@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-
 import NoStyleLink from '../Links/NoStyleLink';
 import { NetlifyFormV2 } from '../forms/NetlifyFormV2';
 import footerLinks from '../../../apis/footerLinks';
-
-const d = new Date().getFullYear();
 
 const Container = styled.div`
   background: ${props => props.theme.colors.black2};
@@ -59,7 +56,6 @@ const MenuRHS = styled.div`
   }
 `;
 
-
 const LinkColumnContainers = styled.div`
   display: flex;
   flex-direction: column;
@@ -83,20 +79,8 @@ const LinkHeaders = styled.h6`
   margin-bottom: 1rem;
 `;
 
-
 const CustomLinks = styled(NoStyleLink)`
   color: ${props => props.theme.colors.lightgrey};
-`;
-
-const A = styled.a`
-  font-size: 1.2rem;
-  color: ${props => props.theme.colors.lightgrey};
-  text-decoration: none;
-`;
-const Attribution = styled.p`
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
 `;
 
 const Footer = () => {
@@ -165,8 +149,6 @@ const Footer = () => {
           </LinkColumnContainers>
         </MenuRHS>
       </Menu>
-
-    
     </Container>
   );
 };

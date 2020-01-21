@@ -70,7 +70,11 @@ const WestParkRidge = () => {
     },
 
     renderNode: {
+      [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+      [BLOCKS.UL_LIST]: (node, children) => <RTFUl>{children}</RTFUl>,
+      [BLOCKS.OL_LIST]: (node, children) => <RTFOl>{children}</RTFOl>,
+      [BLOCKS.LIST_ITEM]: (node, children) => <RTFLi>{children}</RTFLi>,
     },
   };
 
@@ -96,6 +100,9 @@ const WestParkRidge = () => {
 
   const RTFBold = ({ children }) => <Bold>{children}</Bold>;
   const Text = ({ children }) => <P>{children}</P>;
+  const RTFOl = ({ children }) => <Ol>{children}</Ol>;
+  const RTFUl = ({ children }) => <Ul>{children}</Ul>;
+  const RTFLi = ({ children }) => <Li>{children}</Li>;
 
   const StyledImage = styled(Image)`
     border-radius: 1rem;
@@ -136,6 +143,28 @@ const WestParkRidge = () => {
       align-items: center;
     }
   `;
+  const Ol = styled.ul`
+    margin: 2rem;
+  `;
+
+  const Li = styled.li``;
+  const Ul = styled.ul`
+    display: inline-block;
+
+    list-style: none;
+    & ${Li} {
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      color: ${props => props.theme.colors.white};
+      margin-right: 1rem;
+      background: ${props => props.theme.colors.primary};
+      &:hover {
+        background: ${props => props.theme.colors.primaryDark};
+      }
+    }
+  `;
+
   return (
     <LayoutWestRidge>
       <Section style={{ paddingTop: '0' }}>
@@ -172,7 +201,7 @@ const WestParkRidge = () => {
         </Container1200>
       </SectionGrey>
 
-      <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
+      <Section>
         <Container1200 style={{ position: 'relative' }}>
           <Main>{documentToReactComponents(json, options)}</Main>
         </Container1200>
@@ -182,7 +211,7 @@ const WestParkRidge = () => {
           <H2>Tour Our Property</H2>
         </Container1200>
       </SectionGrey>
-      <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
+      <Section>
         <ImageContainerSlider>
           <Slider {...settings}>
             {pictures.map((image, i) => (
@@ -200,7 +229,7 @@ const WestParkRidge = () => {
           <H2>Property Features</H2>
         </Container1200>
       </SectionGrey>
-      <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
+      <Section>
         <Container1200>
           {propertyFeatures.map((item, i) => (
             <LayoutComponent3 key={i} title={item} />
@@ -212,7 +241,7 @@ const WestParkRidge = () => {
           <H2>Community Features</H2>
         </Container1200>
       </SectionGrey>
-      <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
+      <Section>
         <ContainerCenterFlex>
           {communityFeatures.map((item, i) => (
             <LayoutComponent2 key={i} title={item} />
@@ -225,7 +254,7 @@ const WestParkRidge = () => {
           <H2>Tenant Reviews</H2>
         </Container1200>
       </SectionGrey>
-      <Section style={{ paddingTop: 0, marginTop: '-4rem' }}>
+      <Section>
         <Container1200>
           {reviews && <ContentfulPropertyReviews reviews={reviews} />}
         </Container1200>

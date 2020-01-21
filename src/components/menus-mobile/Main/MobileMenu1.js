@@ -21,10 +21,7 @@ export const MobileMenu1 = ({ mobileMenuHandler }) => {
           {' '}
           <StyledLink to="/"> Home </StyledLink>{' '}
         </LinkWrapper>
-        <LinkWrapper>
-          {' '}
-          <StyledLink to="/menu"> Menu </StyledLink>{' '}
-        </LinkWrapper>
+
         <LinkWrapper>
           {' '}
           <StyledLink to="/contact"> Contact</StyledLink>{' '}

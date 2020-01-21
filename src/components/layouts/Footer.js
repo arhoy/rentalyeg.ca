@@ -166,12 +166,7 @@ const Footer = () => {
         </MenuRHS>
       </Menu>
 
-      <Attribution>
-        Created by{' '}
-        <A target="_blank" rel="noopener noreferrer" href="https://Aquasar.io/">
-          Aquasar.io {d} &copy;
-        </A>
-      </Attribution>
+    
     </Container>
   );
 };

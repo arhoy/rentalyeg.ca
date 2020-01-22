@@ -15,6 +15,8 @@ import {
 import PropertyInfo from '../components/home/PropertyInfo';
 import PropertyAmenities from '../components/home/PropertyAmenities';
 import PropertyGallery from '../components/home/PropertyGallery';
+import PropertyReview from '../components/home/PropertyReview';
+import Map1 from '../components/mapbox/Map1';
 
 export const query = graphql`
   {
@@ -121,6 +123,21 @@ const BlueQuillPointe = ({ data }) => {
       </SectionGrey>
       <Section>
         <PropertyGallery />
+      </Section>
+      <SectionGrey>
+        <Container1200>
+          <PropertyReview />
+        </Container1200>
+      </SectionGrey>
+      <Section>
+        <Container1200>
+          <Map1
+            title={`Our Locations`}
+            mapStyle="mapbox://styles/arhoy/ck5n2qqyf0i0v1inwxwapkl7c"
+            width="100%"
+            height="50vh"
+          />
+        </Container1200>
       </Section>
     </LayoutBlueQuillPoint>
   );

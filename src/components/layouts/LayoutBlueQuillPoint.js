@@ -25,6 +25,7 @@ const theme = {
     black: '#484848',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
+    properGrey: '#808080',
     darkGrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     redTransparent: 'rgb(218, 18, 31,0.8)',

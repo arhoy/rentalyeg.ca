@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Image from 'gatsby-image';
-import { graphql, useStaticQuery } from 'gatsby';
-import { StyledImage } from './HomeStyling';
+import { keyframes } from '@emotion/core';
+
 import {
   FaWarehouse,
   FaKey,
@@ -13,14 +12,33 @@ import {
   FaCat,
   FaLandmark,
 } from 'react-icons/fa';
-import { H2, H2Centered } from '../reusableStyles/typography/Typography';
+import { H2Centered } from '../reusableStyles/typography/Typography';
 import { Container1200 } from '../reusableStyles/sections/Sections';
 
+const pulse = keyframes`
+from {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+50% {
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+
+to {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+`;
 const IconContainer = styled.div`
   & > * {
     color: ${props => props.theme.colors.primary};
     width: 6rem;
     height: 6rem;
+    &:hover {
+      animation: ${pulse} 0.7s infinite;
+    }
   }
 `;
 
@@ -30,6 +48,7 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
+
   @media (max-width: ${props => props.theme.screenSize.oneThousand}) {
     grid-template-row: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;

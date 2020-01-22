@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
+import { FaPlus } from 'react-icons/fa';
 import {
   StyledImage2,
   ImageContainerSlider2,
   ImageSlider,
 } from './HomeStyling';
 import Slider from 'react-slick';
-import SliderContainer2 from '../reusableStyles/slider/SliderContainer2';
+import Lightbox from 'react-image-lightbox';
+
+// This only needs to be imported once in your app
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'react-image-lightbox/style.css';
+
 import { H2 } from '../reusableStyles/typography/Typography';
 import { Container800 } from '../reusableStyles/sections/Sections';
 
@@ -18,8 +23,11 @@ const Container = styled.div`
 `;
 
 const PropertyGallery = () => {
-  const handleImageClick = () => {
-    console.log('Clicked');
+  const [modal, setModal] = useState(false);
+  const [imageNumber, setImageNumber] = useState(0);
+  const handleImageClick = i => {
+    setModal(prev => !prev);
+    setImageNumber(i);
   };
 
   const settings = {
@@ -58,6 +66,7 @@ const PropertyGallery = () => {
       },
     ],
   };
+
   const myImages = useStaticQuery(graphql`
     query {
       heroCarousel: allFile(
@@ -67,14 +76,27 @@ const PropertyGallery = () => {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid_tracedSVG
+              src
             }
           }
         }
       }
     }
   `);
+
   return (
     <>
+      {modal && (
+        <Lightbox
+          mainSrc={
+            myImages.heroCarousel.nodes[imageNumber].childImageSharp.fluid.src
+          }
+          onCloseRequest={e => handleImageClick(0)}
+        >
+          Due
+        </Lightbox>
+      )}
+
       <Container800>
         <H2>Property Gallery</H2>
       </Container800>
@@ -82,9 +104,11 @@ const PropertyGallery = () => {
         <ImageContainerSlider2>
           <Slider {...settings}>
             {myImages.heroCarousel.nodes.map((image, i) => (
-              <ImageSlider onClick={handleImageClick} key={i}>
-                {}
+              <ImageSlider modal onClick={e => handleImageClick(i)} key={i}>
                 <StyledImage2 fluid={image.childImageSharp.fluid} />
+                <span className="zoom">
+                  <FaPlus />
+                </span>
               </ImageSlider>
             ))}
           </Slider>

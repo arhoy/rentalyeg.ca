@@ -53,6 +53,8 @@ const StyledImage2 = styled(Image)`
 `;
 
 const ImageSlider = styled.div`
+  position: relative;
+
   width: 100%;
   height: 50rem;
   overflow: hidden;
@@ -62,7 +64,27 @@ const ImageSlider = styled.div`
       filter: brightness(50%);
       transform: scale(1.1);
     }
+    & .zoom {
+      opacity: 0.8;
+      transition: all 0.5s ease-in;
+      transform: scale(1);
+    }
   }
+  & .zoom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    background: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
+  }
+
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     height: 40rem;
   }

@@ -1,17 +1,16 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { Bold } from '../reusableStyles/typography/Typography';
 import {
   Container,
   BlurbContainer,
   CustomH2,
-  CustomP,
   ImageContainer,
   StyledImage,
   CustomPHome,
+  CustomButton,
 } from './HomeStyling';
-import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
+
 import NoStyleLink from '../Links/NoStyleLink';
 
 const PropertyInfo = () => {
@@ -40,9 +39,20 @@ const PropertyInfo = () => {
           irure dolor in reprehenderit in voluptate velit esse cillum
         </CustomPHome>
 
-        <ButtonStyle2>
-          <NoStyleLink to="/recipes">View Recipes</NoStyleLink>
-        </ButtonStyle2>
+        <CustomPHome>
+          <span> Property Name: Blue Quill Pointe</span>
+        </CustomPHome>
+        <CustomPHome>
+          <span> Category: Apartment</span>
+        </CustomPHome>
+        <CustomPHome>
+          <span> Move In Date: Now</span>
+        </CustomPHome>
+        <CustomPHome>Pets : Cat Friendly</CustomPHome>
+
+        <CustomButton>
+          <NoStyleLink to="/contact">Get Details</NoStyleLink>
+        </CustomButton>
       </BlurbContainer>
     </Container>
   );

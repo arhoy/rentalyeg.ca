@@ -43,7 +43,7 @@ const Label = styled.label`
     outline: none;
     border: none;
     border-bottom: 1px solid ${props => props.theme.colors.primaryDark};
-
+    font-family: Poppins, Roboto;
     font-size: 1.6rem;
   }
 `;
@@ -102,7 +102,9 @@ const NetlifyFormV2 = ({ title, color, background }) => {
       body: encode({
         'form-name': form.getAttribute('name'),
         firstName: userData.firstName,
+        lastName: userData.lastName,
         email: userData.email,
+        phoneNumber: userData.phoneNumber,
         message: userData.message,
       }),
     })

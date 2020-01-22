@@ -10,8 +10,11 @@ import { ButtonStyle2Large } from '../components/reusableStyles/buttons/Button';
 import {
   Section,
   Container1200,
+  SectionGrey,
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
+import PropertyAmenities from '../components/home/PropertyAmenities';
+import PropertyGallery from '../components/home/PropertyGallery';
 
 export const query = graphql`
   {
@@ -110,6 +113,14 @@ const BlueQuillPointe = ({ data }) => {
         <Container1200>
           <PropertyInfo />
         </Container1200>
+      </Section>
+      <SectionGrey>
+        <Container1200>
+          <PropertyAmenities />
+        </Container1200>
+      </SectionGrey>
+      <Section>
+        <PropertyGallery />
       </Section>
     </LayoutBlueQuillPoint>
   );

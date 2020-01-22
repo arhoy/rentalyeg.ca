@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import { keyframes } from '@emotion/core';
 
 import LayoutBlueQuillPoint from '../components/layouts/LayoutBlueQuillPoint';
 import { H1 } from '../components/reusableStyles/typography/Typography';
@@ -17,6 +18,20 @@ import PropertyAmenities from '../components/home/PropertyAmenities';
 import PropertyGallery from '../components/home/PropertyGallery';
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
+
+const fadeInDown = keyframes`
+from {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+to {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+`;
 
 export const query = graphql`
   {
@@ -80,18 +95,27 @@ const HeroContent = styled.div`
     color: ${props => props.theme.colors.white};
     font-weight: 100;
     font-size: 7rem;
-    @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    animation: ${fadeInDown} 0.4s;
+ ;
+      (max-width: ${props => props.theme.screenSize.mobileL}) {
       font-size: 4rem;
     }
   }
   & span {
     font-weight: 500;
     padding: 2rem 0;
+    animation: ${fadeInDown} 0.3s;
+    animation-fill-mode: both;
+    animation-delay: .7s;
     @media (max-width: ${props => props.theme.screenSize.mobileL}) {
       display: none;
     }
   }
   & ${ButtonStyle2Large} {
+   
+    animation: ${fadeInDown} 0.2s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
     border-radius: 0;
     font-size: 1.8rem;
     font-weight: 100;

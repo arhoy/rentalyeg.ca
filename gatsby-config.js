@@ -14,8 +14,9 @@ const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
-    title: 'Cameroon Food Invite',
-    description: 'Cameroon Food Invite, Authentic Cameroon Cuisine in Edmonton',
+    title: 'Rental YEG',
+    description:
+      'Rental YEG is the place for affordable amazing apartment rentals',
     author: 'Alex Quasar',
     twitterUsername: '@_RentalYEG',
     image: '/default.png',

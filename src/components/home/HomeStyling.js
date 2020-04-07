@@ -26,6 +26,7 @@ const ImageContainerSlider2 = styled.div`
 
 const BlurbContainer = styled.div`
   margin: 3rem;
+  font-size: 1.4rem;
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     margin: 3rem 0;
   }
@@ -39,26 +40,19 @@ const StyledImage = styled(Image)`
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     margin-top: 2rem;
     min-width: 100vw;
-    height: 40rem;
   }
 `;
 
 const StyledImage2 = styled(Image)`
-  width: 100%;
-  height: 100%;
+  min-width: 35rem;
+  max-width: 45rem;
 
-  background-position: center;
-  background-size: cover;
-  transition: all 0.3s ease-in;
+  margin: 0 auto;
 `;
 
 const ImageSlider = styled.div`
   position: relative;
-
-  width: 100%;
-  height: 50rem;
   overflow: hidden;
-
   &:hover {
     ${StyledImage2} {
       filter: brightness(50%);
@@ -84,13 +78,6 @@ const ImageSlider = styled.div`
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.white};
   }
-
-  @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
-    height: 40rem;
-  }
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    height: 30rem;
-  }
 `;
 
 const CustomP = styled(PBasic)`
@@ -98,8 +85,9 @@ const CustomP = styled(PBasic)`
 `;
 
 const CustomPHome = styled(PBasic)`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 2.5rem;
+  margin-bottom: 2rem;
   & span {
     transition: all 0.5s ease-in;
     &:hover {
@@ -111,13 +99,23 @@ const CustomPHome = styled(PBasic)`
 const CustomH2 = styled(H2)`
   color: ${props => props.theme.colors.primary};
   margin-bottom: 1rem;
+  &.center {
+    text-align: center;
+  }
+`;
 
-  font-size: 4rem;
+const CustomH4 = styled.h4`
+  margin-bottom: 1rem;
+  color: ${props => props.theme.colors.secondary};
+  &.center {
+    text-align: center;
+  }
 `;
 
 const CustomButton = styled(ButtonStyle2)`
   border-radius: 0;
   padding: 1.5rem 3rem;
+  border-radius: 1rem;
 `;
 
 export {
@@ -131,6 +129,7 @@ export {
   StyledImage2,
   CustomP,
   CustomH2,
+  CustomH4,
   CustomPHome,
   CustomButton,
 };

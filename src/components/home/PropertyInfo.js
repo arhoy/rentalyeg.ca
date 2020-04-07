@@ -5,6 +5,7 @@ import {
   Container,
   BlurbContainer,
   CustomH2,
+  CustomH4,
   ImageContainer,
   StyledImage,
   CustomPHome,
@@ -16,7 +17,7 @@ import NoStyleLink from '../Links/NoStyleLink';
 const PropertyInfo = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "about.jpg" }) {
+      image: file(relativePath: { eq: "bcp_2.jpg" }) {
         sharp: childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp
@@ -31,24 +32,19 @@ const PropertyInfo = () => {
         <StyledImage fluid={image.sharp.fluid} fadeIn={true} />
       </ImageContainer>
       <BlurbContainer>
-        <CustomH2>Property Info</CustomH2>
+        <CustomH4>Everyday Living at </CustomH4>
+        <CustomH2>Blue Quill Pointe in Southwest Edmonton</CustomH2>
 
         <CustomPHome>
-          Few word argue that, ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum
+          Resident by resident, we look to provide living space for the everyday
+          person. At Blue Quill Pointe, we are committed to delivering
+          comfortable, quiet and peaceful living with an emphasis on providing
+          positive customer service experiences. Our goal is to provide a
+          friendly and safe environment for you to call home. We promise you our
+          full attention and trustworthy experts to find your home and more
+          importantly, create a happy and meaningful experience. Why? It’s
+          simple: happy home, happy life.
         </CustomPHome>
-
-        <CustomPHome>
-          <span> Property Name: Blue Quill Pointe</span>
-        </CustomPHome>
-        <CustomPHome>
-          <span> Category: Apartment</span>
-        </CustomPHome>
-        <CustomPHome>
-          <span> Move In Date: Now</span>
-        </CustomPHome>
-        <CustomPHome>Pets : Cat Friendly</CustomPHome>
 
         <CustomButton>
           <NoStyleLink to="/contact">Get Details</NoStyleLink>

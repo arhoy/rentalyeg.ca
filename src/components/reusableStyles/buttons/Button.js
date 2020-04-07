@@ -16,17 +16,17 @@ const ButtonStyle1 = styled.button`
 
 const ButtonStyle2 = styled.button`
   outline: none;
-  margin: 1.2rem 0.5rem;
   border: none;
-  padding: 0.7rem 1rem;
+  padding: 0.9rem 2rem;
   color: ${props => props.theme.colors.white};
-  background: ${props => props.theme.colors.primary};
+  background: ${props => props.theme.colors.secondary};
   font-weight: bold;
   cursor: pointer;
   border-radius: 1rem;
+
   &:hover {
     font-weight: bold;
-    background: ${props => props.theme.colors.primaryDark};
+    background: ${props => props.theme.colors.secondaryDark};
   }
   & a {
     color: ${props => props.theme.colors.white};
@@ -60,4 +60,26 @@ const ButtonStyle2Large = styled(ButtonStyle2)`
   font-size: 2rem;
 `;
 
-export { ButtonStyle1, ButtonStyle2, ButtonStyle2Large, ButtonStyle3 };
+const ButtonStyleWhiteHero = styled.button`
+  padding: 2rem 4rem;
+  background: white;
+  color: ${props => props.theme.colors.secondary};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: a11 0.3s ease;
+  &:hover {
+    box-shadow: 0 1rem 1rem -0.4em ${props => props.theme.colors.black};
+  }
+`;
+
+export {
+  ButtonStyle1,
+  ButtonStyle2,
+  ButtonStyle2Large,
+  ButtonStyle3,
+  ButtonStyleWhiteHero,
+};

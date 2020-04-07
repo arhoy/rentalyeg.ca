@@ -3,17 +3,18 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
 import {
-  FaWarehouse,
+  FaUtensils,
   FaKey,
   FaSnowflake,
   FaWheelchair,
   FaLeaf,
   FaSmoking,
   FaCat,
-  FaLandmark,
+  FaSun,
 } from 'react-icons/fa';
 import { H2Centered } from '../reusableStyles/typography/Typography';
 import { Container1200 } from '../reusableStyles/sections/Sections';
+import { PropertyBulletPoints } from './PropertyBulletPoints';
 
 const pulse = keyframes`
 from {
@@ -69,9 +70,26 @@ const Unit = styled.div`
   & h4 {
     padding: 1rem 0;
     text-align: center;
+    color: ${props => props.theme.colors.secondary};
   }
   & p {
     text-align: center;
+  }
+`;
+
+const StyledH2Centered = styled(H2Centered)`
+  color: ${props => props.theme.colors.primary};
+`;
+
+const Blurb = styled.div`
+  margin: 1rem;
+  & p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0.85;
+    max-width: 600px;
+    margin: 0 auto;
   }
 `;
 
@@ -79,58 +97,68 @@ const PropertyAmenities = () => {
   return (
     <>
       <Container1200>
-        <H2Centered>Property Amenities</H2Centered>
+        <StyledH2Centered>Property Amenities</StyledH2Centered>
+        <Blurb>
+          <p>
+            Blue Quill Pointe is a well-maintained building with on-site
+            management to efficiently address any concerns that may arise during
+            your tenancy with us. Our suites are refinished and clean, and we
+            offer spacious one and two-bedroom layouts featuring the following
+            available property amenities:
+          </p>
+        </Blurb>
       </Container1200>
       <Container>
         <Unit>
-          <h4> Fridge & Stove </h4>
           <IconContainer>
-            <FaWarehouse />
+            <FaUtensils />
           </IconContainer>
+          <h4> Fridge & Stove </h4>
         </Unit>
         <Unit>
-          <h4> Secure Entry </h4>
           <IconContainer>
             <FaKey />
           </IconContainer>
+          <h4> Secure Entry </h4>
         </Unit>
         <Unit>
-          <h4> Air Conditioning </h4>
           <IconContainer>
             <FaSnowflake />
           </IconContainer>
+          <h4> Air Conditioning </h4>
         </Unit>
         <Unit>
-          <h4> Elevator in Building </h4>
           <IconContainer>
             <FaWheelchair />
           </IconContainer>
+          <h4> Elevator in Building </h4>
         </Unit>
         <Unit>
-          <h4> Balcony </h4>
           <IconContainer>
-            <FaLandmark />
+            <FaSun />
           </IconContainer>
+          <h4> Balcony </h4>
         </Unit>
         <Unit>
-          <h4> Free Laundry </h4>
           <IconContainer>
             <FaLeaf />
           </IconContainer>
+          <h4> Free Laundry </h4>
         </Unit>
         <Unit>
-          <h4> Cat Friendly </h4>
           <IconContainer>
             <FaCat />
           </IconContainer>
+          <h4> Cat Friendly </h4>
         </Unit>
         <Unit>
-          <h4> Smoking Permitted </h4>
           <IconContainer>
             <FaSmoking />
           </IconContainer>
+          <h4> Smoking Permitted </h4>
         </Unit>
       </Container>
+      <PropertyBulletPoints />
     </>
   );
 };

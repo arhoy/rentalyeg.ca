@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const H1 = styled.h1`
   font-size: 5rem;
-  font-family: Lobster;
+  font-family: Roboto;
   text-align: center;
   color: ${props => props.theme.colors.primary};
   text-shadow: -3px 3px 0 rgba(10, 14, 39, 0.1);
@@ -24,7 +24,7 @@ const ProductPageH1 = styled.h1`
 const H2 = styled.h2`
   font-size: 3.5rem;
   font-family: Lobster;
-  color: ${props => props.theme.colors.black};
+  color: ${props => props.theme.colors.primary};
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     text-align: center;
     font-size: 3rem;

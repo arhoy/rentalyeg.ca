@@ -6,6 +6,8 @@ import {
   StyledImage2,
   ImageContainerSlider2,
   ImageSlider,
+  CustomH4,
+  CustomH2,
 } from './HomeStyling';
 import Slider from 'react-slick';
 import Lightbox from 'react-image-lightbox';
@@ -15,11 +17,19 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-image-lightbox/style.css';
 
-import { H2 } from '../reusableStyles/typography/Typography';
 import { Container800 } from '../reusableStyles/sections/Sections';
 
 const Container = styled.div`
   padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const PropertyGallery = () => {
@@ -40,6 +50,8 @@ const PropertyGallery = () => {
     pauseOnHover: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    rows: 2,
+
     responsive: [
       {
         breakpoint: 1000,
@@ -47,7 +59,8 @@ const PropertyGallery = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+
+          rows: 2,
         },
       },
       {
@@ -98,7 +111,10 @@ const PropertyGallery = () => {
       )}
 
       <Container800>
-        <H2>Property Gallery</H2>
+        <TitleContainer>
+          <CustomH4 className="center">Great Benefits for You</CustomH4>
+          <CustomH2>Property Gallery</CustomH2>
+        </TitleContainer>
       </Container800>
       <Container>
         <ImageContainerSlider2>

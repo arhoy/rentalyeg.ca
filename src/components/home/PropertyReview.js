@@ -2,12 +2,19 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { H2Centered } from '../reusableStyles/typography/Typography';
-import { ImageContainerSlider2 } from './HomeStyling';
+import { ImageContainerSlider2, CustomH2, CustomH4 } from './HomeStyling';
 import Slider from 'react-slick';
 import { PropertyCard } from '../reusableStyles/cards/PropertyCard';
 
 const Card = styled.div`
   outline: none;
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CustomSlider = styled(Slider)``;
@@ -44,7 +51,10 @@ const PropertyReview = () => {
   };
   return (
     <>
-      <H2Centered> People Trust Us</H2Centered>
+      <TitleContainer>
+        <CustomH4>Built On Trust</CustomH4>
+        <CustomH2 className="centered">What People Are Saying</CustomH2>
+      </TitleContainer>
 
       <ImageContainerSlider2>
         <CustomSlider {...settings}>

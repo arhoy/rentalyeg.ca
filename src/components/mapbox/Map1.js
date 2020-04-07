@@ -5,6 +5,7 @@ import storeLocations from './data/mapData';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { SimpleAlertPrimary } from '../reusableStyles/alerts/SimpleAlerts';
 import { Bold, P, H2 } from '../reusableStyles/typography/Typography';
+import { CustomH2, CustomH4 } from '../home/HomeStyling';
 
 const Icon = styled(FaMapMarkerAlt)`
   color: ${props => props.theme.colors.primary};
@@ -16,6 +17,13 @@ const PopupDiv = styled.div``;
 const SelectionHighlight = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Map1 = ({ title, mapStyle, height, width }) => {
@@ -35,8 +43,10 @@ const Map1 = ({ title, mapStyle, height, width }) => {
     <div>
       {title && (
         <>
-          <H2>{title}</H2>
-          <P> {selected ? `${selected.name}` : `Select Location`}</P>
+          <TitleContainer>
+            <CustomH4>Built On Trust</CustomH4>
+            <CustomH2>Our Location</CustomH2>
+          </TitleContainer>
         </>
       )}
 

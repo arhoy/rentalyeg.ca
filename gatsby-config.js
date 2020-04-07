@@ -5,7 +5,7 @@ require('dotenv').config({
 // Define site URL here
 let URL;
 if (process.env.NODE_ENV === 'production') {
-  URL = 'https://ripplejs.com';
+  URL = 'https://rentalyeg.com/';
 } else {
   URL = 'http://localhost:8000';
 }
@@ -35,14 +35,18 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_ID,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken:
+          process.env.NODE_ENV === 'production'
+            ? process.env.CONTENTFUL_ACCESS_TOKEN
+            : process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+        host:
+          process.env.NODE_ENV === 'production' ? '' : 'preview.contentful.com',
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lobster\:300,500,700`, `Montserrat\:300 500 700`],
+        fonts: [`Roboto\:300,500,700`, `Montserrat\:300 500 700`],
         display: 'swap',
       },
     },
@@ -54,25 +58,6 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Roboto`,
-    //         subsets: [`100,400,700`],
-    //       },
-    //       {
-    //         family: `Sacramento`,
-    //         variants: [`400`, `700`],
-    //       },
-    //       {
-    //         family: `Montserrat`,
-    //         variants: [`400`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
 
     {
       resolve: `gatsby-source-filesystem`,

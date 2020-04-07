@@ -77,6 +77,16 @@ const BurgerIcon = styled(FaAlignRight)`
 const CustomButtonStyle2 = styled(ButtonStyle2)`
   font-size: 1.6rem;
   display: flex;
+  background: white;
+  & a {
+    color: ${props => props.theme.colors.secondary};
+  }
+  &:hover {
+    background: ${props => props.theme.colors.secondary};
+    & a {
+      color: ${props => props.theme.colors.white};
+    }
+  }
 `;
 
 const CustomLink = styled(NoStyleLink)`

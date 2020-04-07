@@ -5,7 +5,7 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import Nav from '../navigation/Nav';
+import { MainNav } from '../navigation/MainNav';
 import Footer from './Footer';
 
 // real global scss styles
@@ -13,7 +13,7 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: 'rgb(20, 149, 208)',
+    primary: '#0371E3',
     primaryDark: 'rgb(12, 93, 130)',
     primaryLight: 'rgb(124, 201, 237)',
     primaryVeryLight: 'rgb(253, 229, 179)',
@@ -122,7 +122,7 @@ const Layout = ({ children, full }) => {
         <ThemeProvider theme={theme}>
           <Div>
             <FullNavLayout>
-              <Nav />
+              <MainNav />
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
@@ -133,7 +133,7 @@ const Layout = ({ children, full }) => {
       ) : (
         <ThemeProvider theme={theme}>
           <NavLayout>
-            <Nav />
+            <MainNav />
           </NavLayout>
           <DivFixed>
             <Main>{children}</Main>

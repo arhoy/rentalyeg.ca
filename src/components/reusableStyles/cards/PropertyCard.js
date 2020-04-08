@@ -3,8 +3,9 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   outline: none;
-  margin: 3rem;
+  margin: 2rem;
   padding: 4rem;
+  min-width: 30rem;
   background: ${props => props.theme.colors.white};
   color: ${props => props.theme.colors.properGrey};
   & p {
@@ -12,6 +13,9 @@ const Container = styled.div`
     font-family: 'Lora', Helvetica, Arial, sans-serif;
 
     font-style: italic;
+  }
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    margin: 0;
   }
 `;
 

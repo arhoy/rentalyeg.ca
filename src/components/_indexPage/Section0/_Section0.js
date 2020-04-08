@@ -29,7 +29,7 @@ export const Section0 = () => {
       }
     }
   `);
-  console.log(data);
+
   return (
     <Container>
       <Property1 fluid={data.bcp_hero.childImageSharp.fluid} />

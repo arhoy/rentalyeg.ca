@@ -6,10 +6,14 @@ const Container = styled.div`
   flex-wrap: wrap;
 
   justify-content: center;
+  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
+    display: grid;
+  }
 `;
 
 const Ul = styled.ul`
-  margin: 1rem 1rem;
+  margin: 1rem;
+  margin-right: 1.6rem;
   font-size: 1.4rem;
   font-weight: bold;
   opacity: 0.85;
@@ -25,59 +29,29 @@ const Ul = styled.ul`
   }
 `;
 
-export const PropertyBulletPoints = () => {
+export const PropertyBulletPoints = ({ property }) => {
   return (
     <Container>
       <Ul>
-        <li>
-          <span>Large private balconies or patios</span>
-        </li>
-        <li>
-          {' '}
-          <span>3 appliances (fridge, stove, and dishwasher)</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span>Conveniently located laundry rooms</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span> Elevators </span>{' '}
-        </li>
+        {property.section2bulletsA.map((item, i) => (
+          <li key={i}>
+            <span>{item}</span>
+          </li>
+        ))}
       </Ul>
       <Ul>
-        <li>
-          <span>Large private balconies or patios</span>
-        </li>
-        <li>
-          {' '}
-          <span>3 appliances (fridge, stove, and dishwasher)</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span>Conveniently located laundry rooms</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span> Elevators </span>{' '}
-        </li>
+        {property.section2bulletsB.map((item, i) => (
+          <li key={i}>
+            <span>{item}</span>
+          </li>
+        ))}
       </Ul>
       <Ul>
-        <li>
-          <span>Large private balconies or patios</span>
-        </li>
-        <li>
-          {' '}
-          <span>3 appliances (fridge, stove, and dishwasher)</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span>Conveniently located laundry rooms</span>{' '}
-        </li>
-        <li>
-          {' '}
-          <span> Elevators </span>{' '}
-        </li>
+        {property.section2bulletsC.map((item, i) => (
+          <li key={i}>
+            <span>{item}</span>
+          </li>
+        ))}
       </Ul>
     </Container>
   );

@@ -20,10 +20,63 @@ import PropertyGallery from '../components/home/PropertyGallery';
 
 export const query = graphql`
   {
-    heroImage: file(relativePath: { eq: "bcp_hero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_tracedSVG
+    allContentfulCommunity {
+      nodes {
+        slug
+        title
+        section0heroImage {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section0Title
+        addressName
+        section1subtitle
+        section1title
+        section1blurb {
+          id
+          json
+        }
+        section1picture {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section2title
+        section2blurb {
+          section2blurb
+        }
+        section2list
+        section2bulletsA
+        section2bulletsB
+        section2bulletsC
+        section3gallery {
+          title
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section3galleryTitle
+        section3gallerySubtitle
+        section4reviewsTitle
+        section4reviewSubtitle
+        section4reviewsOnCommunity {
+        reviewerName
+        reviewerPosition
+        childContentfulCommunityReviewsDescriptionTextNode{
+          description
+        }
+        reviewImage {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+      }
+        section5locationTitle
+        section5locationSubtitle
+        section5mapCoordinates {
+          lon
+          lat
         }
       }
     }
@@ -31,26 +84,29 @@ export const query = graphql`
 `;
 
 const BlueQuillPointe = ({ data }) => {
+  const property = data.allContentfulCommunity.nodes[0];
+  const heroImageFluid = property.section0heroImage.fluid;
+
   return (
     <LayoutBlueQuillPoint>
-      <Section0 fluid={data.heroImage.childImageSharp.fluid} />
+      <Section0 fluid={heroImageFluid} property={property} />
 
       <Section>
         <Container1200>
-          <PropertyInfo />
+          <PropertyInfo property={property} />
         </Container1200>
       </Section>
       <SectionGrey>
         <Container1200>
-          <PropertyAmenities />
+          <PropertyAmenities property={property} />
         </Container1200>
       </SectionGrey>
       <Section>
-        <PropertyGallery />
+        <PropertyGallery property={property} />
       </Section>
       <SectionGrey>
         <Container1200>
-          <PropertyReview />
+          <PropertyReview property={property} />
         </Container1200>
       </SectionGrey>
       <Section>
@@ -60,6 +116,7 @@ const BlueQuillPointe = ({ data }) => {
             mapStyle="mapbox://styles/arhoy/ck5n2qqyf0i0v1inwxwapkl7c"
             width="100%"
             height="50vh"
+            property={property}
           />
         </Container1200>
       </Section>

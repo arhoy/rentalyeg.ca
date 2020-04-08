@@ -32,7 +32,7 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
-const PropertyGallery = () => {
+const PropertyGallery = ({ property }) => {
   const [modal, setModal] = useState(false);
   const [imageNumber, setImageNumber] = useState(0);
   const handleImageClick = i => {
@@ -112,16 +112,18 @@ const PropertyGallery = () => {
 
       <Container800>
         <TitleContainer>
-          <CustomH4 className="center">Great Benefits for You</CustomH4>
-          <CustomH2>Property Gallery</CustomH2>
+          <CustomH4 className="center">
+            {property.section3gallerySubtitle}
+          </CustomH4>
+          <CustomH2>{property.section3galleryTitle}</CustomH2>
         </TitleContainer>
       </Container800>
       <Container>
         <ImageContainerSlider2>
           <Slider {...settings}>
-            {myImages.heroCarousel.nodes.map((image, i) => (
+            {property.section3gallery.map((image, i) => (
               <ImageSlider modal onClick={e => handleImageClick(i)} key={i}>
-                <StyledImage2 fluid={image.childImageSharp.fluid} />
+                <StyledImage2 fluid={image.fluid} />
                 <span className="zoom">
                   <FaPlus />
                 </span>

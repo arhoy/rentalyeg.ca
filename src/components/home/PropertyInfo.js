@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-
+import styled from '@emotion/styled';
 import {
   Container,
   BlurbContainer,
@@ -8,43 +7,44 @@ import {
   CustomH4,
   ImageContainer,
   StyledImage,
-  CustomPHome,
   CustomButton,
 } from './HomeStyling';
 
 import NoStyleLink from '../Links/NoStyleLink';
 
-const PropertyInfo = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "bcp_2.jpg" }) {
-        sharp: childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
+import { BLOCKS } from '@contentful/rich-text-types';
+// RICH TEXT
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+// styled p
+const ArticleP = styled.p`
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  opacity: 0.85;
+`;
+
+const Text = ({ children }) => <ArticleP>{children}</ArticleP>;
+
+const PropertyInfo = ({ property }) => {
+  const { json } = property.section1blurb;
+
+  const options = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    },
+  };
   return (
     <Container>
       <ImageContainer>
-        <StyledImage fluid={image.sharp.fluid} fadeIn={true} />
+        <StyledImage fluid={property.section1picture.fluid} fadeIn={true} />
       </ImageContainer>
       <BlurbContainer>
-        <CustomH4>Everyday Living at </CustomH4>
-        <CustomH2>Blue Quill Pointe in Southwest Edmonton</CustomH2>
+        <CustomH4>{property.section1subtitle} </CustomH4>
+        <CustomH2>{property.section1title} </CustomH2>
 
-        <CustomPHome>
-          Resident by resident, we look to provide living space for the everyday
-          person. At Blue Quill Pointe, we are committed to delivering
-          comfortable, quiet and peaceful living with an emphasis on providing
-          positive customer service experiences. Our goal is to provide a
-          friendly and safe environment for you to call home. We promise you our
-          full attention and trustworthy experts to find your home and more
-          importantly, create a happy and meaningful experience. Why? It’s
-          simple: happy home, happy life.
-        </CustomPHome>
+        <main>{documentToReactComponents(json, options)}</main>
 
         <CustomButton>
           <NoStyleLink to="/contact">Get Details</NoStyleLink>

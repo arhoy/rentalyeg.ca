@@ -88,6 +88,7 @@ const CustomPHome = styled(PBasic)`
   font-size: 1.5rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
   & span {
     transition: all 0.5s ease-in;
     &:hover {

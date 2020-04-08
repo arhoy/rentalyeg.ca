@@ -103,13 +103,13 @@ const ButtonContainer = styled.div`
   margin-top: 2rem;
 `;
 
-export const Section0 = ({ fluid }) => {
+export const Section0 = ({ fluid, property }) => {
   return (
     <HeroBackgroundImage fluid={fluid}>
       <HeroContentContainer>
         <HeroContent>
-          <H1>Modern Affordable Housing</H1>
-          <address> 11615 28 Ave NW, Edmonton, AB T6J 4G2 </address>
+          <H1>{property.section0Title}</H1>
+          <address> {property.addressName} </address>
           <ButtonContainer>
             <ButtonStyleWhiteHero>Take a Tour</ButtonStyleWhiteHero>
           </ButtonContainer>

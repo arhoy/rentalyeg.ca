@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
-import storeLocations from './data/mapData';
+
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { SimpleAlertPrimary } from '../reusableStyles/alerts/SimpleAlerts';
-import { Bold, P, H2 } from '../reusableStyles/typography/Typography';
+import { Bold } from '../reusableStyles/typography/Typography';
 import { CustomH2, CustomH4 } from '../home/HomeStyling';
 
 const Icon = styled(FaMapMarkerAlt)`
@@ -26,7 +26,11 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
-const Map1 = ({ title, mapStyle, height, width }) => {
+const Map1 = ({ title, mapStyle, height, width, property }) => {
+  const storeLocations = [
+    { address: property.addressName, name: property.title },
+  ];
+
   const [viewport, setViewport] = useState({
     latitude: 53.558542,
     longitude: -113.5376507,
@@ -44,8 +48,8 @@ const Map1 = ({ title, mapStyle, height, width }) => {
       {title && (
         <>
           <TitleContainer>
-            <CustomH4>Built On Trust</CustomH4>
-            <CustomH2>Our Location</CustomH2>
+            <CustomH4>{property.section5locationSubtitle}</CustomH4>
+            <CustomH2>{property.section5locationTitle}</CustomH2>
           </TitleContainer>
         </>
       )}
@@ -61,9 +65,9 @@ const Map1 = ({ title, mapStyle, height, width }) => {
       >
         {storeLocations.map(location => (
           <Marker
-            key={location.name}
-            latitude={location.coordinates.lat}
-            longitude={location.coordinates.long}
+            key={property.title}
+            latitude={property.section5mapCoordinates.lat}
+            longitude={property.section5mapCoordinates.lon}
           >
             <Icon
               onClick={e => {
@@ -74,8 +78,8 @@ const Map1 = ({ title, mapStyle, height, width }) => {
         ))}
         {selected && (
           <Popup
-            latitude={selected.coordinates.lat}
-            longitude={selected.coordinates.long}
+            latitude={property.section5mapCoordinates.lat}
+            longitude={property.section5mapCoordinates.lon}
             onClose={() => {
               setSelected(null);
             }}

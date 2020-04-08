@@ -93,19 +93,13 @@ const Blurb = styled.div`
   }
 `;
 
-const PropertyAmenities = () => {
+const PropertyAmenities = ({ property }) => {
   return (
     <>
       <Container1200>
-        <StyledH2Centered>Property Amenities</StyledH2Centered>
+        <StyledH2Centered>{property.section2title}</StyledH2Centered>
         <Blurb>
-          <p>
-            Blue Quill Pointe is a well-maintained building with on-site
-            management to efficiently address any concerns that may arise during
-            your tenancy with us. Our suites are refinished and clean, and we
-            offer spacious one and two-bedroom layouts featuring the following
-            available property amenities:
-          </p>
+          <p>{property.section2blurb.section2blurb}</p>
         </Blurb>
       </Container1200>
       <Container>
@@ -113,52 +107,52 @@ const PropertyAmenities = () => {
           <IconContainer>
             <FaUtensils />
           </IconContainer>
-          <h4> Fridge & Stove </h4>
+          <h4> {property.section2list[0] && property.section2list[0]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaKey />
           </IconContainer>
-          <h4> Secure Entry </h4>
+          <h4> {property.section2list[1] && property.section2list[1]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaSnowflake />
           </IconContainer>
-          <h4> Air Conditioning </h4>
+          <h4> {property.section2list[2] && property.section2list[2]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaWheelchair />
           </IconContainer>
-          <h4> Elevator in Building </h4>
+          <h4> {property.section2list[3] && property.section2list[3]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaSun />
           </IconContainer>
-          <h4> Balcony </h4>
+          <h4> {property.section2list[4] && property.section2list[4]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaLeaf />
           </IconContainer>
-          <h4> Free Laundry </h4>
+          <h4> {property.section2list[5] && property.section2list[5]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaCat />
           </IconContainer>
-          <h4> Cat Friendly </h4>
+          <h4> {property.section2list[6] && property.section2list[6]} </h4>
         </Unit>
         <Unit>
           <IconContainer>
             <FaSmoking />
           </IconContainer>
-          <h4> Smoking Permitted </h4>
+          <h4> {property.section2list[7] && property.section2list[7]} </h4>
         </Unit>
       </Container>
-      <PropertyBulletPoints />
+      <PropertyBulletPoints property={property} />
     </>
   );
 };

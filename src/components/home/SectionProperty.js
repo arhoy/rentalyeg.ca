@@ -70,7 +70,6 @@ const Container = styled.div`
 `;
 
 export const SectionProperty = ({ item, number, url }) => {
-  console.log('ITEM is ', item);
   return (
     <Container number={number}>
       {url ? (

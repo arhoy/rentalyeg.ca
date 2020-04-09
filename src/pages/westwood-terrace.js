@@ -2,8 +2,6 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import LayoutWestWoodTerrace from '../components/layouts/LayoutWestWoodTerrace';
-
 import {
   Section,
   Container1200,
@@ -17,6 +15,7 @@ import Map1 from '../components/mapbox/Map1';
 import { Section0 } from '../components/_wwt/Section0/_Section0';
 
 import PropertyGallery from '../components/home/PropertyGallery';
+import LayoutWestWoodTerrace from '../components/layouts/LayoutWestwoodTerrace';
 
 export const query = graphql`
   {

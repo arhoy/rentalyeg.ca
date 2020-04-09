@@ -69,6 +69,7 @@ const NavContainer = styled.nav`
 
 const BurgerIcon = styled(FaAlignRight)`
   cursor: pointer;
+  background: ${props => props.theme.colors.primary};
   @media (min-width: ${props => props.theme.screenSize.mobileL}) {
     display: none;
   }
@@ -77,6 +78,13 @@ const BurgerIcon = styled(FaAlignRight)`
 const CustomButtonStyle2 = styled(ButtonStyle2)`
   font-size: 1.6rem;
   display: flex;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  background: ${props => props.theme.colors.primary};
+  &:hover {
+    background: ${props => props.theme.colors.primaryLight};
+  }
 `;
 
 const CustomLink = styled(NoStyleLink)`
@@ -85,8 +93,9 @@ const CustomLink = styled(NoStyleLink)`
   padding: 1rem;
   margin: 0 1rem;
 
-  & :hover {
-    color: ${props => props.theme.colors.primary};
+  &:hover {
+    color: ${props => props.theme.colors.primaryDark};
+    text-decoration: underline;
   }
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     padding: 1.3rem;
@@ -94,13 +103,15 @@ const CustomLink = styled(NoStyleLink)`
 `;
 
 const CustomALink = styled.a`
-  text-decoration: none;
   display: inline;
   color: inherit;
   padding: 1rem;
   margin: 0 1rem;
-  & :hover {
-    color: ${props => props.theme.colors.primary};
+  text-decoration: none;
+
+  &:hover {
+    color: ${props => props.theme.colors.primaryDark};
+    text-decoration: underline;
   }
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     padding: 1.3rem;
@@ -135,19 +146,13 @@ export const MainNav = () => {
 
         <NavContainer>
           <CustomLink to="/">Home </CustomLink>
+          <CustomLink to="/about">About </CustomLink>
           <CustomALink
             href={`https://wpr.managebuilding.com/Resident/public/contact`}
             target={'_blank'}
             rel="noopener noreferrer"
           >
             Contact Us
-          </CustomALink>
-          <CustomALink
-            href={`https://wpr.managebuilding.com/Resident/apps/rentalapp/`}
-            target={'_blank'}
-            rel="noopener noreferrer"
-          >
-            Apply Now
           </CustomALink>
 
           <CustomButtonStyle2>

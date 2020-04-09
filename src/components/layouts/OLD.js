@@ -5,7 +5,7 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import CommunityNav from '../navigation/CommunityNav';
+import WestParkRidgeNav from '../navigation/WestParkRidgeNav';
 import FooterWestRidge from './FooterWestRidge';
 
 // real global scss styles
@@ -13,19 +13,18 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: '#3291BA',
-    primaryDark: '#1677A0',
-    primaryLight: '#4EB6E3',
-    secondary: '#81B241',
-    secondaryDark: '#75A931',
-    secondaryLight: '#A4D06B',
+    primary: 'rgb(20, 149, 208)',
+    primaryDark: 'rgb(12, 93, 130)',
+    primaryLight: 'rgb(124, 201, 237)',
+    primaryVeryLight: 'rgb(253, 229, 179)',
+    primaryTransparent: 'rgb(220,128,37,0.10)',
+    secondary: 'rgb(24, 163, 201)',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
-    white: '#FBFCFC',
+    white: 'white',
     black: '#484848',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
-    properGrey: '#808080',
     darkGrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     redTransparent: 'rgb(218, 18, 31,0.8)',
@@ -101,34 +100,8 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutBlueQuillPoint = ({ children, full }) => {
+const LayoutWestRidge = ({ children, full }) => {
   const bodyColor = 'white';
-
-  const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
-    phone: '780-306-2335',
-    name: 'Blue Quill Pointe',
-    slug: '/blue-quill-pointe',
-    slogan: 'Modern Affordable Housing',
-    links: {
-      contact: {
-        title: 'Contact Us',
-        url: 'https://wpr.managebuilding.com/Resident/public/contact',
-      },
-      home: {
-        title: 'Home',
-        url: '/',
-      },
-      applyNow: {
-        title: 'Apply Now',
-        url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
-      },
-      phone: {
-        title: '780.306.2335',
-        url: 'tel:123-456-7890',
-      },
-    },
-  };
 
   return (
     <>
@@ -151,7 +124,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
         <ThemeProvider theme={theme}>
           <Div>
             <FullNavLayout>
-              <CommunityNav data={communityData}></CommunityNav>
+              <WestParkRidgeNav />
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
@@ -162,7 +135,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
       ) : (
         <ThemeProvider theme={theme}>
           <NavLayout>
-            <CommunityNav data={communityData}></CommunityNav>
+            <WestParkRidgeNav />
           </NavLayout>
           <DivFixed>
             <Main>{children}</Main>
@@ -175,11 +148,11 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
     </>
   );
 };
-LayoutBlueQuillPoint.propTypes = {
+LayoutWestRidge.propTypes = {
   full: PropTypes.bool,
 };
-LayoutBlueQuillPoint.defaultProps = {
+LayoutWestRidge.defaultProps = {
   full: true,
 };
 
-export default LayoutBlueQuillPoint;
+export default LayoutWestRidge;

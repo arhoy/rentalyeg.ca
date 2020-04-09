@@ -20,7 +20,7 @@ import PropertyGallery from '../components/home/PropertyGallery';
 
 export const query = graphql`
   {
-    allContentfulCommunity {
+    allContentfulCommunity(filter: { slug: { eq: "blue-quill-pointe" } }) {
       nodes {
         slug
         title
@@ -61,17 +61,17 @@ export const query = graphql`
         section4reviewsTitle
         section4reviewSubtitle
         section4reviewsOnCommunity {
-        reviewerName
-        reviewerPosition
-        childContentfulCommunityReviewsDescriptionTextNode{
-          description
-        }
-        reviewImage {
-          fluid {
-            ...GatsbyContentfulFluid_withWebp
+          reviewerName
+          reviewerPosition
+          childContentfulCommunityReviewsDescriptionTextNode {
+            description
+          }
+          reviewImage {
+            fluid {
+              ...GatsbyContentfulFluid_withWebp
+            }
           }
         }
-      }
         section5locationTitle
         section5locationSubtitle
         section5mapCoordinates {

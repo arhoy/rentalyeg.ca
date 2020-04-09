@@ -13,12 +13,12 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: '#3291BA',
-    primaryDark: '#1677A0',
-    primaryLight: '#4EB6E3',
-    secondary: '#81B241',
-    secondaryDark: '#75A931',
-    secondaryLight: '#A4D06B',
+    primary: '#2F3E4E',
+    primaryDark: '#262D35',
+    primaryLight: '#394D62',
+    secondary: '#E54D43',
+    secondaryDark: '#C6443D',
+    secondaryLight: '#F9726B',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
     white: '#FBFCFC',
@@ -101,19 +101,19 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutBlueQuillPoint = ({ children, full }) => {
+const LayoutWestWoodTerrace = ({ children, full }) => {
   const bodyColor = 'white';
 
   const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+    address: '75 Woodsmere Close | Fort Saskatchewan AB T8L-0C8',
     phone: '780-306-2335',
-    name: 'Blue Quill Pointe',
-    slug: '/blue-quill-pointe',
+    name: 'Westwood Terrace',
+    slug: '/westwood-terrace',
     slogan: 'Modern Affordable Housing',
     links: {
       contact: {
         title: 'Contact Us',
-        url: 'https://wpr.managebuilding.com/Resident/public/contact',
+        url: 'https://wwt.managebuilding.com/Resident/public/contact',
       },
       home: {
         title: 'Home',
@@ -121,7 +121,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
       },
       applyNow: {
         title: 'Apply Now',
-        url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
+        url: 'https://wwt.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
         title: '780.306.2335',
@@ -175,11 +175,11 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
     </>
   );
 };
-LayoutBlueQuillPoint.propTypes = {
+LayoutWestWoodTerrace.propTypes = {
   full: PropTypes.bool,
 };
-LayoutBlueQuillPoint.defaultProps = {
+LayoutWestWoodTerrace.defaultProps = {
   full: true,
 };
 
-export default LayoutBlueQuillPoint;
+export default LayoutWestWoodTerrace;

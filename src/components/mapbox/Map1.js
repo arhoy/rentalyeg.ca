@@ -28,7 +28,10 @@ const TitleContainer = styled.div`
 
 const Map1 = ({ title, mapStyle, height, width, property }) => {
   const storeLocations = [
-    { address: property.addressName, name: property.title },
+    {
+      address: property && property.addressName,
+      name: property && property.title,
+    },
   ];
 
   const [viewport, setViewport] = useState({

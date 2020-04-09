@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FaFacebookSquare } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import NoStyleLink from '../Links/NoStyleLink';
 import { NetlifyFormV2 } from '../forms/NetlifyFormV2';
-import footerLinks from '../../../apis/footerLinks';
 
 const d = new Date().getFullYear();
 
 const Container = styled.div`
-  background: ${props => props.theme.colors.black2};
+  background: #333333;
   color: ${props => props.theme.colors.white};
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -17,18 +16,20 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 500;
+  font-family: Montserrat;
+  .socialIcons {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
 `;
 
 const Menu = styled.ul`
   display: grid;
   width: 100%;
 
-  grid-template-columns: 4fr 6fr;
+  grid-template-columns: 6fr 3fr;
   grid-column-gap: 2rem;
-  @media (max-width: ${props => props.theme.screenSize.oneThousand}) {
-    grid-template-columns: 1fr;
-    width: 80%;
-  }
+
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     grid-template-columns: 1fr;
     width: 100%;
@@ -44,7 +45,7 @@ const MenuLHS = styled.div`
 const MenuRHS = styled.div`
   display: grid;
   color: ${props => props.theme.colors.lightgrey};
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr);
 
   justify-content: center;
   width: 100%;
@@ -77,22 +78,27 @@ const LinkContainers = styled.div`
 
   font-size: 1.5rem;
   padding: 1rem;
-  margin: 1rem 0;
 `;
 
 const LinkHeaders = styled.h6`
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 13px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: 1rem;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  &.bold {
+    font-weight: bold;
+    font-size: 17px;
+  }
 `;
 const LinkHeadersPrimary = styled(LinkHeaders)`
-  color: ${props => props.theme.colors.primaryLight};
   font-size: 2.5rem;
-  font-weight: 500;
-`;
-const LinkDescription = styled.p`
-  color: ${props => props.theme.colors.primaryLight};
+  font-weight: 700;
+  font-size: 3rem;
 `;
 
 const CustomLinks = styled(NoStyleLink)`
@@ -121,54 +127,49 @@ const FooterWestRidge = () => {
           <LinkColumnContainers>
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
-              <LinkHeadersPrimary style={{ marginBottom: '-0.5rem' }}>
-                780.306.2335
-              </LinkHeadersPrimary>
+              <LinkHeadersPrimary>780.306.2335</LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
-              <LinkHeaders>Site links</LinkHeaders>
-              {footerLinks &&
-                footerLinks.map((link, i) => (
-                  <CustomLinks key={i} to={`/${link.slug}`}>
-                    {link.title}
-                    {/* <img
-                      src={link.image}
-                      style={{ width: '4rem', height: '4rem' }}
-                    /> */}
-                  </CustomLinks>
-                ))}
+              <CustomLinks to="/Home">Home</CustomLinks>
+              <CustomLinks to="/contact">Contact</CustomLinks>
+              <CustomLinks to="/contact">Apply Now</CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
+
           <LinkColumnContainers>
             <LinkContainers>
-              <LinkHeaders>Follow Us</LinkHeaders>
+              <LinkHeaders className="bold">Support</LinkHeaders>
+              <CustomLinks to="/contact">Report an issue</CustomLinks>
+              <CustomLinks to="/privacy-policy">Privacy Policy</CustomLinks>
+              <CustomLinks to="/terms-and-conditions">
+                Terms & Conditions
+              </CustomLinks>
+            </LinkContainers>
+            <LinkContainers>
+              <LinkHeaders className="bold">Follow Us</LinkHeaders>
               <SocialIconContainer>
                 <SocialIcon
                   href={`https://www.facebook.com/Westpark-Ridge-Community-102976637840998/`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaFacebookSquare />
+                  <FaFacebookF className="socialIcons" />
+                </SocialIcon>
+                <SocialIcon
+                  href={`https://www.instagram.com/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="socialIcons" />
+                </SocialIcon>
+                <SocialIcon
+                  href={`https://www.twitter.com`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter className="socialIcons" />
                 </SocialIcon>
               </SocialIconContainer>
-            </LinkContainers>
-            <LinkContainers>
-              <LinkHeaders>RentalYEG </LinkHeaders>
-              <CustomLinks to="/contact">Contact Us</CustomLinks>
-            </LinkContainers>
-          </LinkColumnContainers>
-          <LinkColumnContainers>
-            <LinkContainers>
-              <LinkHeaders>Email Us</LinkHeaders>
-              <LinkDescription>RentalYEG2020@gmail.com</LinkDescription>
-            </LinkContainers>
-            <LinkContainers>
-              <LinkHeaders>Rent Seekers</LinkHeaders>
-              <CustomLinks to="/contact">Report an issue</CustomLinks>
-              <CustomLinks to="/privacy-policy">Privacy Policy</CustomLinks>
-              <CustomLinks to="/terms-and-conditions">
-                Terms & Conditions
-              </CustomLinks>
             </LinkContainers>
           </LinkColumnContainers>
         </MenuRHS>

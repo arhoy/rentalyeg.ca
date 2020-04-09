@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { graphql, useStaticQuery } from 'gatsby';
-import { Property1 } from './Properties';
+
+import { Property1, Property2, Property3, Property4 } from './Properties';
 
 const Container = styled.div`
   max-width: ${props => props.theme.screenSize.oneThousand};
@@ -17,25 +17,15 @@ const Container = styled.div`
   }
 `;
 
-export const Section0 = () => {
-  const data = useStaticQuery(graphql`
-    {
-      bcp_hero: file(relativePath: { eq: "bcp_hero.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100, maxWidth: 2000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
-
+export const Section0 = ({ data }) => {
+  const property = data.allContentfulCommunity.nodes;
+  console.log('preotry', property[0]);
   return (
     <Container>
-      <Property1 fluid={data.bcp_hero.childImageSharp.fluid} />
-      <Property1 fluid={data.bcp_hero.childImageSharp.fluid} />
-      <Property1 fluid={data.bcp_hero.childImageSharp.fluid} />
-      <Property1 fluid={data.bcp_hero.childImageSharp.fluid} />
+      <Property1 property={property[0]} />
+      <Property2 property={property[2]} />
+      <Property3 property={property[3]} />
+      <Property4 property={property[1]} />
     </Container>
   );
 };

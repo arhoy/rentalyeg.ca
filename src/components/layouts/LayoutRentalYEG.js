@@ -13,12 +13,12 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: '#3291BA',
-    primaryDark: '#1677A0',
-    primaryLight: '#4EB6E3',
-    secondary: '#81B241',
-    secondaryDark: '#75A931',
-    secondaryLight: '#A4D06B',
+    primary: '#EEA940',
+    primaryDark: '#E08C0F',
+    primaryLight: '#FFC36B',
+    secondary: '#0371E3',
+    secondaryDark: '#0470DB',
+    secondaryLight: '#439EF9',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
     white: '#FBFCFC',
@@ -101,14 +101,14 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutBlueQuillPoint = ({ children, full }) => {
+const LayoutRentalYEG = ({ children, full }) => {
   const bodyColor = 'white';
 
   const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+    address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
     phone: '780-306-2335',
-    name: 'Blue Quill Pointe',
-    slug: '/blue-quill-pointe',
+    name: 'Rental YEG',
+    slug: '/rental-yeg',
     slogan: 'Modern Affordable Housing',
     links: {
       contact: {
@@ -168,18 +168,18 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <FooterWestRidge />
+            <FooterWestRidge data={communityData} />
           </FooterLayout>
         </ThemeProvider>
       )}
     </>
   );
 };
-LayoutBlueQuillPoint.propTypes = {
+LayoutRentalYEG.propTypes = {
   full: PropTypes.bool,
 };
-LayoutBlueQuillPoint.defaultProps = {
+LayoutRentalYEG.defaultProps = {
   full: true,
 };
 
-export default LayoutBlueQuillPoint;
+export default LayoutRentalYEG;

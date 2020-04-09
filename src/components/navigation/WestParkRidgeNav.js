@@ -12,7 +12,6 @@ import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
 import NoStyleLink from '../Links/NoStyleLink';
 
 const Header = styled.header`
-  font-family: Lobster;
   font-weight: bold;
   height: 9vh;
   position: relative;

@@ -3,17 +3,16 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
 
-  justify-content: center;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     display: grid;
   }
 `;
 
 const Ul = styled.ul`
-  margin: 1rem;
-  margin-right: 1.6rem;
+  max-width: 30rem;
+  margin: 2rem auto;
+
   font-size: 1.4rem;
   font-weight: bold;
   opacity: 0.85;

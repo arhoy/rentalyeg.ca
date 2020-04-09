@@ -10,8 +10,6 @@ if (process.env.NODE_ENV === 'production') {
   URL = 'http://localhost:8000';
 }
 
-const queries = require('./src/utils/algolia');
-
 module.exports = {
   siteMetadata: {
     title: 'Rental YEG',
@@ -30,9 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-emotion`,
     },
-
     {
       resolve: `gatsby-source-contentful`,
+
       options: {
         spaceId: process.env.CONTENTFUL_ID,
         accessToken:
@@ -40,7 +38,9 @@ module.exports = {
             ? process.env.CONTENTFUL_ACCESS_TOKEN
             : process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
         host:
-          process.env.NODE_ENV === 'production' ? '' : 'preview.contentful.com',
+          process.env.NODE_ENV === 'production'
+            ? 'https://rentalyeg.com'
+            : 'preview.contentful.com',
       },
     },
     {

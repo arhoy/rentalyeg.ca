@@ -116,7 +116,7 @@ const Attribution = styled.p`
   text-transform: uppercase;
 `;
 
-const Footer = () => {
+const FooterRentalYEG = () => {
   return (
     <Container>
       <Menu>
@@ -188,4 +188,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterRentalYEG;

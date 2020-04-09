@@ -11,7 +11,6 @@ import {
   Section,
   Container1200,
   SectionGrey,
- 
 } from '../components/reusableStyles/sections/Sections.js';
 
 import Map1 from '../components/mapbox/Map1';
@@ -51,14 +50,72 @@ const Title = styled(H1)`
   font-weight: bold;
 `;
 
-
-
 export const query = graphql`
   {
     picture1: file(relativePath: { eq: "contact.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    allContentfulCommunity(filter: { slug: { eq: "rental-yeg" } }) {
+      nodes {
+        slug
+        title
+        section0heroImage {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section0Title
+        addressName
+        section1subtitle
+        section1title
+        section1blurb {
+          id
+          json
+        }
+        section1picture {
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section2title
+        section2blurb {
+          section2blurb
+        }
+        section2list
+        section2bulletsA
+        section2bulletsB
+        section2bulletsC
+        section3gallery {
+          title
+          fluid {
+            ...GatsbyContentfulFluid_withWebp
+          }
+        }
+        section3galleryTitle
+        section3gallerySubtitle
+        section4reviewsTitle
+        section4reviewSubtitle
+        section4reviewsOnCommunity {
+          reviewerName
+          reviewerPosition
+          childContentfulCommunityReviewsDescriptionTextNode {
+            description
+          }
+          reviewImage {
+            fluid {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+        }
+        section5locationTitle
+        section5locationSubtitle
+        section5mapCoordinates {
+          lon
+          lat
         }
       }
     }
@@ -79,34 +136,64 @@ const contact = ({ data }) => {
         </SubDiv>
       </HeroBackgroundImage>
 
-
-
       <SectionCustom>
-        <ContactCard title1={'Blue Quill Pointe'} title2={`Like Us on Facebook`} blurb1= {`Interested in our rental units? Pick up the phone and chat with one of our property managers`} blurb2 = {`Visit our communities on Facebook. Or like our Facebook page below`} link = {`https://business.facebook.com/BlueQuillYEG/?business_id=167614697271218`}
-        linkText = {`View Facebook Page`} phoneNumber = {`780-756-7411`} phoneNumberDisplay = {`780.756.7411`} email = {`community@bluequillapartments.ca`} address = {`11615 28 Ave NW, Edmonton, AB T6J 4G2`}
-        /> 
+        <ContactCard
+          title1={'Blue Quill Pointe'}
+          title2={`Like Us on Facebook`}
+          blurb1={`Interested in our rental units? Pick up the phone and chat with one of our property managers`}
+          blurb2={`Visit our communities on Facebook. Or like our Facebook page below`}
+          link={`https://business.facebook.com/BlueQuillYEG/?business_id=167614697271218`}
+          linkText={`View Facebook Page`}
+          phoneNumber={`780-756-7411`}
+          phoneNumberDisplay={`780.756.7411`}
+          email={`community@bluequillapartments.ca`}
+          address={`11615 28 Ave NW, Edmonton, AB T6J 4G2`}
+        />
       </SectionCustom>
 
       <SectionCustom>
-        <ContactCard title1={'Live Treo'} title2={`Like Us on Facebook`} blurb1= {`Interested in our rental units? Pick up the phone and chat with one of our property managers`} blurb2 = {`Visit our communities on Facebook. Or like our Facebook page below`} link = {`https://business.facebook.com/LiveTreo-Rental-Communities-111380130328006/?business_id=167614697271218`}
-        linkText = {`View Facebook Page`} phoneNumber = {`780-306-2337`} phoneNumberDisplay = {`780.306.2337`}
-        email = {`community@livetreo.ca`} address = {`Multiple`}
-        /> 
+        <ContactCard
+          title1={'Live Treo'}
+          title2={`Like Us on Facebook`}
+          blurb1={`Interested in our rental units? Pick up the phone and chat with one of our property managers`}
+          blurb2={`Visit our communities on Facebook. Or like our Facebook page below`}
+          link={`https://business.facebook.com/LiveTreo-Rental-Communities-111380130328006/?business_id=167614697271218`}
+          linkText={`View Facebook Page`}
+          phoneNumber={`780-306-2337`}
+          phoneNumberDisplay={`780.306.2337`}
+          email={`community@livetreo.ca`}
+          address={`Multiple`}
+        />
       </SectionCustom>
       <SectionCustom>
-        <ContactCard title1={'WestPark Ridge'} title2={`Like Us on Facebook`} blurb1= {`Interested in our rental units? Pick up the phone and chat with one of our property managers`} blurb2 = {`Visit our communities on Facebook. Or like our Facebook page below`} link = {`https://www.facebook.com/Westpark-Ridge-Community-102976637840998/`}
-            linkText = {`View Facebook Page`} phoneNumber = {`780-306-2335`} phoneNumberDisplay = {`780.306.2335`}
-            email = {``} address = {``}
-        /> 
+        <ContactCard
+          title1={'WestPark Ridge'}
+          title2={`Like Us on Facebook`}
+          blurb1={`Interested in our rental units? Pick up the phone and chat with one of our property managers`}
+          blurb2={`Visit our communities on Facebook. Or like our Facebook page below`}
+          link={`https://www.facebook.com/Westpark-Ridge-Community-102976637840998/`}
+          linkText={`View Facebook Page`}
+          phoneNumber={`780-306-2335`}
+          phoneNumberDisplay={`780.306.2335`}
+          email={``}
+          address={``}
+        />
       </SectionCustom>
 
       <SectionCustom>
-        <ContactCard title1={'WestWood Terrace'} title2={`Like Us on Facebook`} blurb1= {`Interested in our rental units? Pick up the phone and chat with one of our property managers`} blurb2 = {`Visit our communities on Facebook. Or like our Facebook page below`} link = {`https://business.facebook.com/Westwood-Terrace-Community-108069854065988/?business_id=167614697271218`}
-        linkText = {`View Facebook Page`} phoneNumber = {`780-992-0243`} phoneNumberDisplay = {`780.992.0243`}
-        email = {``} address = {``}
-        /> 
+        <ContactCard
+          title1={'WestWood Terrace'}
+          title2={`Like Us on Facebook`}
+          blurb1={`Interested in our rental units? Pick up the phone and chat with one of our property managers`}
+          blurb2={`Visit our communities on Facebook. Or like our Facebook page below`}
+          link={`https://business.facebook.com/Westwood-Terrace-Community-108069854065988/?business_id=167614697271218`}
+          linkText={`View Facebook Page`}
+          phoneNumber={`780-992-0243`}
+          phoneNumberDisplay={`780.992.0243`}
+          email={``}
+          address={``}
+        />
       </SectionCustom>
-
 
       <Section>
         <Container1200>
@@ -115,6 +202,7 @@ const contact = ({ data }) => {
             mapStyle="mapbox://styles/arhoy/ck5n2qqyf0i0v1inwxwapkl7c"
             width="100%"
             height="50vh"
+            property={data.allContentfulCommunity.nodes[0]}
           />
         </Container1200>
       </Section>

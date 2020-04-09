@@ -2,7 +2,7 @@ import React from 'react';
 
 import { graphql } from 'gatsby';
 
-import LayoutWestRidge from '../components/layouts/LayoutWestRidge';
+import LayoutRentalYEG from '../components/layouts/LayoutRentalYEG';
 
 import {
   Section,
@@ -14,13 +14,13 @@ import PropertyAmenities from '../components/home/PropertyAmenities';
 
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
-import { Section0 } from '../components/_wpr/Section0/_Section0';
+import { Section0 } from '../components/_ryeg/Section0/_Section0';
 
 import PropertyGallery from '../components/home/PropertyGallery';
 
 export const query = graphql`
   {
-    allContentfulCommunity(filter: { slug: { eq: "westpark-ridge" } }) {
+    allContentfulCommunity(filter: { slug: { eq: "rental-yeg" } }) {
       nodes {
         slug
         title
@@ -83,12 +83,12 @@ export const query = graphql`
   }
 `;
 
-const WestRidge = ({ data }) => {
+const RentalYEG = ({ data }) => {
   const property = data.allContentfulCommunity.nodes[0];
   const heroImageFluid = property.section0heroImage.fluid;
 
   return (
-    <LayoutWestRidge>
+    <LayoutRentalYEG>
       <Section0 fluid={heroImageFluid} property={property} />
 
       <Section>
@@ -120,7 +120,7 @@ const WestRidge = ({ data }) => {
           />
         </Container1200>
       </Section>
-    </LayoutWestRidge>
+    </LayoutRentalYEG>
   );
 };
-export default WestRidge;
+export default RentalYEG;

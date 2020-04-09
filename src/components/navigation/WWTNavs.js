@@ -123,7 +123,7 @@ const CustomALink = styled.a`
 //   opacity: 0.7;
 // `;
 
-const BlueQuillNav = () => {
+const WWTNav = () => {
   // const { image } = useStaticQuery(graphql`
   //   query {
   //     image: file(relativePath: { eq: "Logo.png" }) {
@@ -146,20 +146,20 @@ const BlueQuillNav = () => {
     <>
       <Header>
         <Logo>
-          <LogoLink to="/">Blue Quill Pointe</LogoLink>
+          <LogoLink to="/">Westwood Terrace</LogoLink>
         </Logo>
 
         <NavContainer>
           <CustomLink to="/">Home </CustomLink>
           <CustomALink
-            href={`https://wpr.managebuilding.com/Resident/public/contact`}
+            href={`https://wwt.managebuilding.com/Resident/public/contact`}
             target={'_blank'}
             rel="noopener noreferrer"
           >
             Contact Us
           </CustomALink>
           <CustomALink
-            href={`https://wpr.managebuilding.com/Resident/apps/rentalapp/`}
+            href={`https://wwt.managebuilding.com/Resident/apps/rentalapp/`}
             target={'_blank'}
             rel="noopener noreferrer"
           >
@@ -180,4 +180,4 @@ const BlueQuillNav = () => {
   );
 };
 
-export default BlueQuillNav;
+export default WWTNav;

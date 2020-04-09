@@ -19,7 +19,6 @@ const TitleContainer = styled.div`
 const CustomSlider = styled(Slider)``;
 
 const PropertyReview = ({ property }) => {
-  console.log('property review is', property);
   const reviews = property.section4reviewsOnCommunity;
   const settings = {
     dots: true,

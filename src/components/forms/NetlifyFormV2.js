@@ -11,8 +11,13 @@ function encode(data) {
     .join('&');
 }
 
+const Container = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+`;
+
 const Form = styled.form`
-  border-bottom: 1rem solid ${props => props.theme.colors.primaryDark};
+  color: #aaaaaa;
 `;
 
 const Row = styled.div`
@@ -31,6 +36,7 @@ const Label = styled.label`
   display: block;
   outline: none;
   font-size: 1.5rem;
+  color: white;
   & h6 {
     margin-bottom: 3px;
     font-weight: 500;
@@ -42,7 +48,7 @@ const Label = styled.label`
     width: 100%;
     outline: none;
     border: none;
-    border-bottom: 1px solid ${props => props.theme.colors.primaryDark};
+
     font-family: Poppins, Roboto;
     font-size: 1.6rem;
   }
@@ -54,28 +60,36 @@ const FormTitle = styled.h4`
   text-transform: uppercase;
   margin: 0 1rem;
   letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 3rem;
 `;
 
 const TextArea = styled.textarea`
-  background: ${props => props.background || props.theme.colors.darkGrey};
+  background: #f1f9ff;
   height: 10rem;
 
   &::placeholder {
-    color: ${props => props.color || props.theme.colors.lightgrey};
+    color: inherit;
     text-indent: 1rem;
   }
 `;
 const Input = styled.input`
   padding-left: 1rem;
-  background: ${props => props.background || props.theme.colors.darkGrey};
-  color: ${props => props.color || props.theme.colors.lightgrey};
+  background: #f1f9ff;
+  color: #aaaaaa;
 
   outline: none;
   border: none;
   &::placeholder {
-    color: ${props => props.color || props.theme.colors.lightgrey};
+    color: inherit;
     text-indent: 1rem;
   }
+`;
+
+const Button = styled(ButtonStyle3)`
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 3rem;
 `;
 
 const NetlifyFormV2 = ({ title, color, background }) => {
@@ -113,7 +127,7 @@ const NetlifyFormV2 = ({ title, color, background }) => {
   };
 
   return (
-    <>
+    <Container>
       <FormTitle>{title || 'How Can We Help?'}</FormTitle>
       <Form
         name="contact-2"
@@ -213,10 +227,10 @@ const NetlifyFormV2 = ({ title, color, background }) => {
         </Row>
 
         <Field>
-          <ButtonStyle3 type="submit">Send Info To Us</ButtonStyle3>
+          <Button type="submit">Send Your Message</Button>
         </Field>
       </Form>
-    </>
+    </Container>
   );
 };
 

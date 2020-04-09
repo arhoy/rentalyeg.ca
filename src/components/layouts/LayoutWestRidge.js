@@ -5,7 +5,7 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import WestParkRidgeNav from '../navigation/WestParkRidgeNav';
+import CommunityNav from '../navigation/CommunityNav';
 import FooterWestRidge from './FooterWestRidge';
 
 // real global scss styles
@@ -13,18 +13,19 @@ import '../../scss/main.scss';
 
 const theme = {
   colors: {
-    primary: 'rgb(20, 149, 208)',
-    primaryDark: 'rgb(12, 93, 130)',
-    primaryLight: 'rgb(124, 201, 237)',
-    primaryVeryLight: 'rgb(253, 229, 179)',
-    primaryTransparent: 'rgb(220,128,37,0.10)',
-    secondary: 'rgb(24, 163, 201)',
+    primary: '#55BBCC',
+    primaryDark: '#1677A0',
+    primaryLight: '#4EB6E3',
+    secondary: '#22425F',
+    secondaryDark: '#75A931',
+    secondaryLight: '#A4D06B',
     lightgrey: '#F2F2F2',
     lightgrey2: 'rgb(224, 217, 217)',
-    white: 'white',
+    white: '#FBFCFC',
     black: '#484848',
     black2: 'rgb(38, 34, 27)',
     blackTransparent: 'rgba(41, 43, 46, 0.3)',
+    properGrey: '#808080',
     darkGrey: 'rgb(109, 109, 109)',
     red: 'rgb(218, 18, 31)',
     redTransparent: 'rgb(218, 18, 31,0.8)',
@@ -103,6 +104,32 @@ const FullFooterLayout = styled.footer`
 const LayoutWestRidge = ({ children, full }) => {
   const bodyColor = 'white';
 
+  const communityData = {
+    address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
+    phone: '780-306-2335',
+    name: 'Westpark Ridge',
+    slug: '/westpark-ridge',
+    slogan: 'Modern Affordable Housing',
+    links: {
+      contact: {
+        title: 'Contact Us',
+        url: 'https://wpr.managebuilding.com/Resident/public/contact',
+      },
+      home: {
+        title: 'Home',
+        url: '/',
+      },
+      applyNow: {
+        title: 'Apply Now',
+        url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
+      },
+      phone: {
+        title: '780.306.2335',
+        url: 'tel:123-456-7890',
+      },
+    },
+  };
+
   return (
     <>
       <Global
@@ -124,7 +151,7 @@ const LayoutWestRidge = ({ children, full }) => {
         <ThemeProvider theme={theme}>
           <Div>
             <FullNavLayout>
-              <WestParkRidgeNav />
+              <CommunityNav data={communityData}></CommunityNav>
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
@@ -135,7 +162,7 @@ const LayoutWestRidge = ({ children, full }) => {
       ) : (
         <ThemeProvider theme={theme}>
           <NavLayout>
-            <WestParkRidgeNav />
+            <CommunityNav data={communityData}></CommunityNav>
           </NavLayout>
           <DivFixed>
             <Main>{children}</Main>

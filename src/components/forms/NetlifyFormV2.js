@@ -62,6 +62,7 @@ const FormTitle = styled.h4`
   letter-spacing: 5px;
   font-weight: 600;
   font-size: 3rem;
+  color: ${props => (props.color ? props.color : props.theme.colors.secondary)};
 `;
 
 const TextArea = styled.textarea`
@@ -90,6 +91,8 @@ const Button = styled(ButtonStyle3)`
   width: 100%;
   text-transform: uppercase;
   border-radius: 3rem;
+  background: ${props =>
+    props.color ? props.color : props.theme.colors.secondary};
 `;
 
 const NetlifyFormV2 = ({ title, color, background }) => {
@@ -128,7 +131,7 @@ const NetlifyFormV2 = ({ title, color, background }) => {
 
   return (
     <Container>
-      <FormTitle>{title || 'How Can We Help?'}</FormTitle>
+      <FormTitle color={color}>{title || 'How Can We Help?'}</FormTitle>
       <Form
         name="contact-2"
         method="POST"
@@ -227,7 +230,9 @@ const NetlifyFormV2 = ({ title, color, background }) => {
         </Row>
 
         <Field>
-          <Button type="submit">Send Your Message</Button>
+          <Button color={color} type="submit">
+            Send Your Message
+          </Button>
         </Field>
       </Form>
     </Container>

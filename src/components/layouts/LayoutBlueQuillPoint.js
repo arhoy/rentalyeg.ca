@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import CommunityNav from '../navigation/CommunityNav';
-import FooterWestRidge from './FooterWestRidge';
+import FooterCommunity from './FooterCommunity';
 
 // real global scss styles
 import '../../scss/main.scss';
@@ -113,7 +113,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
     links: {
       contact: {
         title: 'Contact Us',
-        url: 'https://wpr.managebuilding.com/Resident/public/contact',
+        url: 'https://bqp.managebuilding.com/Resident/public/contact',
       },
       home: {
         title: 'Home',
@@ -121,11 +121,23 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
       },
       applyNow: {
         title: 'Apply Now',
-        url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
+        url: 'https://bqp.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
         title: '780.306.2335',
         url: 'tel:123-456-7890',
+      },
+      fb: {
+        title: 'www.facebook.com',
+        url: 'https://www.facebook.com/',
+      },
+      insta: {
+        title: 'www.instagram.com',
+        url: 'https://www.instagram.com/',
+      },
+      twitter: {
+        title: 'twitter',
+        url: 'https://twitter.com/home',
       },
     },
   };
@@ -155,7 +167,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
-              <FooterWestRidge />
+              <FooterCommunity data={communityData} />
             </FullFooterLayout>
           </Div>
         </ThemeProvider>
@@ -168,7 +180,7 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <FooterWestRidge />
+            <FooterCommunity data={communityData} />
           </FooterLayout>
         </ThemeProvider>
       )}

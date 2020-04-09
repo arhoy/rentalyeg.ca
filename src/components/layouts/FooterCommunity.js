@@ -75,7 +75,6 @@ const LinkColumnContainers = styled.div`
 const LinkContainers = styled.div`
   display: flex;
   flex-direction: column;
-
   font-size: 1.5rem;
   padding: 1rem;
 `;
@@ -96,13 +95,80 @@ const LinkHeaders = styled.h6`
   }
 `;
 const LinkHeadersPrimary = styled(LinkHeaders)`
+  & a {
+    text-decoration: none;
+    color: ${props =>
+      props.color ? props.color : props.theme.colors.secondary};
+  }
   font-size: 2.5rem;
   font-weight: 700;
   font-size: 3rem;
 `;
 
 const CustomLinks = styled(NoStyleLink)`
-  color: ${props => props.theme.colors.lightgrey};
+  display: inline-block;
+  clear: both;
+  float: left;
+  text-decoration: none;
+  width: max-content;
+
+  position: relative;
+  overflow: hidden;
+  color: ${props => props.theme.colors.white};
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: ${props => props.theme.colors.white};
+    height: 1px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+`;
+
+const CustomALink = styled.a`
+  display: inline-block;
+  clear: both;
+  float: left;
+  text-decoration: none;
+  width: max-content;
+
+  position: relative;
+  overflow: hidden;
+  color: ${props => props.theme.colors.white};
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: 0px;
+    background: ${props => props.theme.colors.white};
+    height: 1px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
 `;
 
 const A = styled.a`
@@ -116,23 +182,38 @@ const Attribution = styled.p`
   text-transform: uppercase;
 `;
 
-const FooterWestRidge = () => {
+const FooterCommunity = ({ data, color }) => {
+  console.log('data footer', color);
   return (
     <Container>
       <Menu>
         <MenuLHS>
-          <NetlifyFormV2 />
+          <NetlifyFormV2 color={color} />
         </MenuLHS>
         <MenuRHS>
           <LinkColumnContainers>
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
-              <LinkHeadersPrimary>780.306.2335</LinkHeadersPrimary>
+              <LinkHeadersPrimary color={color}>
+                <a href={data.links.phone.url}> {data.links.phone.title}</a>
+              </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
-              <CustomLinks to="/Home">Home</CustomLinks>
-              <CustomLinks to="/contact">Contact</CustomLinks>
-              <CustomLinks to="/contact">Apply Now</CustomLinks>
+              <CustomLinks to="/">Home</CustomLinks>
+              <CustomALink
+                href={data.links.contact.url}
+                target={'_blank'}
+                rel="noopener noreferrer"
+              >
+                {data.links.contact.title}
+              </CustomALink>
+              <CustomALink
+                href={data.links.applyNow.url}
+                target={'_blank'}
+                rel="noopener noreferrer"
+              >
+                {data.links.applyNow.title}
+              </CustomALink>
             </LinkContainers>
           </LinkColumnContainers>
 
@@ -149,21 +230,21 @@ const FooterWestRidge = () => {
               <LinkHeaders className="bold">Follow Us</LinkHeaders>
               <SocialIconContainer>
                 <SocialIcon
-                  href={`https://www.facebook.com/Westpark-Ridge-Community-102976637840998/`}
+                  href={data.links.fb.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaFacebookF className="socialIcons" />
                 </SocialIcon>
                 <SocialIcon
-                  href={`https://www.instagram.com/`}
+                  href={data.links.insta.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaInstagram className="socialIcons" />
                 </SocialIcon>
                 <SocialIcon
-                  href={`https://www.twitter.com`}
+                  href={data.links.fb.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -188,4 +269,4 @@ const FooterWestRidge = () => {
   );
 };
 
-export default FooterWestRidge;
+export default FooterCommunity;

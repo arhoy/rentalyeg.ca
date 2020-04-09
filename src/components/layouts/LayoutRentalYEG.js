@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import CommunityNav from '../navigation/CommunityNav';
-import FooterWestRidge from './FooterWestRidge';
+import FooterCommunity from './FooterCommunity';
 
 // real global scss styles
 import '../../scss/main.scss';
@@ -103,9 +103,8 @@ const FullFooterLayout = styled.footer`
 
 const LayoutRentalYEG = ({ children, full }) => {
   const bodyColor = 'white';
-
   const communityData = {
-    address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
+    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
     phone: '780-306-2335',
     name: 'Rental YEG',
     slug: '/rental-yeg',
@@ -113,7 +112,7 @@ const LayoutRentalYEG = ({ children, full }) => {
     links: {
       contact: {
         title: 'Contact Us',
-        url: 'https://wpr.managebuilding.com/Resident/public/contact',
+        url: 'https://bqp.managebuilding.com/Resident/public/contact',
       },
       home: {
         title: 'Home',
@@ -121,11 +120,23 @@ const LayoutRentalYEG = ({ children, full }) => {
       },
       applyNow: {
         title: 'Apply Now',
-        url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
+        url: 'https://bqp.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
         title: '780.306.2335',
         url: 'tel:123-456-7890',
+      },
+      fb: {
+        title: 'www.facebook.com',
+        url: 'https://www.facebook.com/',
+      },
+      insta: {
+        title: 'www.instagram.com',
+        url: 'https://www.instagram.com/',
+      },
+      twitter: {
+        title: 'twitter',
+        url: 'https://twitter.com/home',
       },
     },
   };
@@ -155,7 +166,7 @@ const LayoutRentalYEG = ({ children, full }) => {
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
-              <FooterWestRidge />
+              <FooterCommunity data={communityData} color="#EEA940" />
             </FullFooterLayout>
           </Div>
         </ThemeProvider>
@@ -168,7 +179,7 @@ const LayoutRentalYEG = ({ children, full }) => {
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <FooterWestRidge data={communityData} />
+            <FooterCommunity data={communityData} color="#EEA940" />
           </FooterLayout>
         </ThemeProvider>
       )}

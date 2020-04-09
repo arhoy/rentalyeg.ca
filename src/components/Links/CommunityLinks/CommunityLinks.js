@@ -70,6 +70,15 @@ const CustomLink = styled(NoStyleLink)`
 const Button = styled(ButtonStyle2)`
   font-size: 1.6rem;
   display: flex;
+  background: white;
+  &:hover {
+    & a {
+      color: white;
+    }
+  }
+  a {
+    color: ${props => props.theme.colors.primary};
+  }
 `;
 
 const CustomALink = styled.a`

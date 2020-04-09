@@ -1,32 +1,25 @@
+/* eslint-disable */
 import React, { useState } from 'react';
-// import { graphql, useStaticQuery } from 'gatsby';
-import { Link } from 'gatsby';
-
-import { FaAlignRight } from 'react-icons/fa';
 
 import styled from '@emotion/styled';
 
-import { MobileMenu1 } from '../menus-mobile/Main/MobileMenu1';
-import { ButtonStyle2 } from '../reusableStyles/buttons/Button';
+import { MobileMenu } from './MobileMenu';
 
-import NoStyleLink from '../Links/NoStyleLink';
+import { MainLinks } from '../Links/CommunityLinks/MainLinks';
+import { BurgerBlack } from './BurgerBlack';
+import { MobileMenuMain } from './MobileMenuMain';
 
 const Header = styled.header`
   font-weight: bold;
-  height: 10vh;
+  height: 9vh;
   position: relative;
-  padding: 0 2rem;
-  color: ${props => props.theme.colors.primary};
+  z-index: 101;
   background: white;
-  font-family: Roboto;
+  color: ${props => props.theme.colors.black};
   display: flex;
-
   margin: 0 auto;
-
   justify-content: space-around;
   align-items: center;
-
-  z-index: 1;
 
   a {
     display: flex;
@@ -38,99 +31,31 @@ const Header = styled.header`
   }
 `;
 
-const Logo = styled.div`
-  position: relative;
-  padding: 0;
-  margin: 0;
-`;
-const LogoLink = styled(Link)`
+const HeaderTop = styled.div`
+  grid-column: 1/-1;
   display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  text-decoration: none !important;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem;
+  width: 100%;
 `;
 
-const NavContainer = styled.nav`
-  color: inherit;
+const BurgerIconContainer = styled.div`
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 40px;
+  height: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  height: 100%;
-
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    display: none;
-  }
-`;
-
-const BurgerIcon = styled(FaAlignRight)`
-  cursor: pointer;
-  background: ${props => props.theme.colors.primary};
   @media (min-width: ${props => props.theme.screenSize.mobileL}) {
     display: none;
   }
 `;
 
-const CustomButtonStyle2 = styled(ButtonStyle2)`
-  font-size: 1.6rem;
-  display: flex;
-  padding: 0.5rem 1.5rem;
-  font-weight: bold;
-  border-radius: 1.5rem;
-  background: ${props => props.theme.colors.primary};
-  &:hover {
-    background: ${props => props.theme.colors.primaryLight};
-  }
-`;
-
-const CustomLink = styled(NoStyleLink)`
-  display: inline;
-  color: inherit;
-  padding: 1rem;
-  margin: 0 1rem;
-
-  &:hover {
-    color: ${props => props.theme.colors.primaryDark};
-    text-decoration: underline;
-  }
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    padding: 1.3rem;
-  }
-`;
-
-const CustomALink = styled.a`
-  display: inline;
-  color: inherit;
-  padding: 1rem;
-  margin: 0 1rem;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.colors.primaryDark};
-    text-decoration: underline;
-  }
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    padding: 1.3rem;
-  }
-`;
-
-export const MainNav = () => {
-  // const { image } = useStaticQuery(graphql`
-  //   query {
-  //     image: file(relativePath: { eq: "Logo.png" }) {
-  //       sharp: childImageSharp {
-  //         fluid(maxWidth: 600) {
-  //           src
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
+const MainNav = ({ data }) => {
   const [mobileMenuOpen, setMobileMenu] = useState(false);
 
   const mobileMenuHandler = () => {
@@ -140,31 +65,16 @@ export const MainNav = () => {
   return (
     <>
       <Header>
-        <Logo>
-          <LogoLink to="/">LIVE TREO</LogoLink>
-        </Logo>
-
-        <NavContainer>
-          <CustomLink to="/">Home </CustomLink>
-          <CustomLink to="/about">About </CustomLink>
-          <CustomALink
-            href={`https://wpr.managebuilding.com/Resident/public/contact`}
-            target={'_blank'}
-            rel="noopener noreferrer"
-          >
-            Contact Us
-          </CustomALink>
-
-          <CustomButtonStyle2>
-            <a href="tel:780-306-2335"> 780.306.2335</a>
-          </CustomButtonStyle2>
-        </NavContainer>
-
-        <BurgerIcon onClick={mobileMenuHandler} />
-        {mobileMenuOpen ? (
-          <MobileMenu1 mobileMenuHandler={mobileMenuHandler} />
-        ) : null}
+        <HeaderTop>
+          <MainLinks data={data} />
+          <BurgerIconContainer onClick={mobileMenuHandler}>
+            <BurgerBlack open={mobileMenuOpen.toString()} />
+          </BurgerIconContainer>
+        </HeaderTop>
       </Header>
+      {mobileMenuOpen && <MobileMenuMain data={data}></MobileMenuMain>}
     </>
   );
 };
+
+export default MainNav;

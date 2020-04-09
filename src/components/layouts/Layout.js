@@ -5,11 +5,48 @@ import { ThemeProvider } from 'emotion-theming';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { MainNav } from '../navigation/MainNav';
-import Footer from './Footer';
-
 // real global scss styles
 import '../../scss/main.scss';
+import MainNav from '../navigation/MainNav';
+import FooterCommunity from './FooterCommunity';
+
+const communityData = {
+  address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+  phone: '780-306-2335',
+  name: 'Live Treo',
+  slug: '/',
+  slogan: 'Join Our Communities',
+  links: {
+    contact: {
+      title: 'Contact Us',
+      url: 'https://livetreo.managebuilding.com/Resident/public/contact',
+    },
+    home: {
+      title: 'Home',
+      url: '/',
+    },
+    applyNow: {
+      title: 'Apply Now',
+      url: 'https://livetreo.managebuilding.com/Resident/apps/rentalapp/',
+    },
+    phone: {
+      title: '780.306.2335',
+      url: 'tel:123-456-7890',
+    },
+    fb: {
+      title: 'www.facebook.com',
+      url: 'https://www.facebook.com/',
+    },
+    insta: {
+      title: 'www.instagram.com',
+      url: 'https://www.instagram.com/',
+    },
+    twitter: {
+      title: 'twitter',
+      url: 'https://twitter.com/home',
+    },
+  },
+};
 
 const theme = {
   colors: {
@@ -121,24 +158,24 @@ const Layout = ({ children, full }) => {
         <ThemeProvider theme={theme}>
           <Div>
             <FullNavLayout>
-              <MainNav />
+              <MainNav data={communityData}></MainNav>
             </FullNavLayout>
             <MainFull>{children}</MainFull>
             <FullFooterLayout>
-              <Footer />
+              <FooterCommunity data={communityData} color="#0371E3" />
             </FullFooterLayout>
           </Div>
         </ThemeProvider>
       ) : (
         <ThemeProvider theme={theme}>
           <NavLayout>
-            <MainNav />
+            <MainNav data={communityData}></MainNav>
           </NavLayout>
           <DivFixed>
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <Footer />
+            <FooterCommunity data={communityData} color="#0371E3" />
           </FooterLayout>
         </ThemeProvider>
       )}

@@ -2,7 +2,6 @@ import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 const StyledImage = styled.img`
   max-width: 50%;

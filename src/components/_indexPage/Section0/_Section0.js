@@ -19,7 +19,7 @@ const Container = styled.div`
 
 export const Section0 = ({ data }) => {
   const property = data.allContentfulCommunity.nodes;
-  console.log('preotry', property[0]);
+
   return (
     <Container>
       <Property1 property={property[0]} />

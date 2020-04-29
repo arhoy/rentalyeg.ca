@@ -80,30 +80,11 @@ const PropertyGallery = ({ property }) => {
     ],
   };
 
-  const myImages = useStaticQuery(graphql`
-    query {
-      heroCarousel: allFile(
-        filter: { relativePath: { regex: "/bluequill/" } }
-      ) {
-        nodes {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_tracedSVG
-              src
-            }
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <>
       {modal && (
         <Lightbox
-          mainSrc={
-            myImages.heroCarousel.nodes[imageNumber].childImageSharp.fluid.src
-          }
+          mainSrc={property.section3gallery[imageNumber].fluid.src}
           onCloseRequest={e => handleImageClick(0)}
         >
           Due

@@ -2,7 +2,7 @@
 // http://react-responsive-carousel.js.org/#demos
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import styled from '@emotion/styled';
 
 const StyledCarousel = styled(Carousel)`

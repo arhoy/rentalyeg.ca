@@ -72,7 +72,6 @@ const Blurb = styled.div`
 `;
 
 export const Section0 = ({ data }) => {
-  console.log('data', data);
   const contentfulData = useStaticQuery(graphql`
     {
       allContentfulCommunity(filter: { slug: { eq: "westpark-ridge" } }) {
@@ -89,9 +88,8 @@ export const Section0 = ({ data }) => {
     }
   `);
 
-  console.log('conetnetf', contentfulData);
   const property = contentfulData.allContentfulCommunity.nodes[0];
-  console.log(property);
+
   return (
     <Container>
       <ImageContainer>

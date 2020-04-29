@@ -145,7 +145,6 @@ const AddressIcon = styled(FaMapMarkerAlt)`
 `;
 
 export const MobileMenuMain = ({ data }) => {
-  console.log(data.links.contact.title);
   return (
     <Container>
       <MenuLinks>

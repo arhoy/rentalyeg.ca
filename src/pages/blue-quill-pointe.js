@@ -17,6 +17,7 @@ import Map1 from '../components/mapbox/Map1';
 import { Section0 } from '../components/_bcp/Section0/_Section0';
 
 import PropertyGallery from '../components/home/PropertyGallery';
+import { VirtualTour } from '../components/virualTours/VirtualTour';
 
 export const query = graphql`
   {
@@ -103,6 +104,10 @@ const BlueQuillPointe = ({ data }) => {
       </SectionGrey>
       <Section>
         <PropertyGallery property={property} />
+      </Section>
+
+      <Section style={{ paddingTop: '0' }}>
+        <VirtualTour src={'https://my.matterport.com/show/?m=paGZncmFHVg'} />
       </Section>
       <SectionGrey>
         <Container1200>

@@ -183,7 +183,6 @@ const Attribution = styled.p`
 `;
 
 const FooterCommunity = ({ data, color }) => {
-  console.log('data footer', color);
   return (
     <Container>
       <Menu>

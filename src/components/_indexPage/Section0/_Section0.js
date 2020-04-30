@@ -20,12 +20,17 @@ const Container = styled.div`
 export const Section0 = ({ data }) => {
   const property = data.allContentfulCommunity.nodes;
 
+  const bqp = property.filter(data => data.slug === 'blue-quill-pointe')[0];
+  const wwt = property.filter(data => data.slug === 'westwood-terrace')[0];
+  const wpr = property.filter(data => data.slug === 'westpark-ridge')[0];
+  const ryeg = property.filter(data => data.slug === 'rental-yeg')[0];
+
   return (
     <Container>
-      <Property1 property={property[0]} />
-      <Property2 property={property[2]} />
-      <Property3 property={property[3]} />
-      <Property4 property={property[1]} />
+      <Property1 property={bqp} />
+      <Property2 property={wwt} />
+      <Property3 property={wpr} />
+      <Property4 property={ryeg} />
     </Container>
   );
 };

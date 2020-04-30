@@ -36,6 +36,7 @@ const StyledImage = styled(Image)`
   min-width: 35rem;
   max-width: 45rem;
   object-fit: cover;
+  overflow: hidden;
   margin: 0 auto;
   @media (max-width: ${props => props.theme.screenSize.eightHundred}) {
     margin-top: 2rem;
@@ -44,19 +45,23 @@ const StyledImage = styled(Image)`
 `;
 
 const StyledImage2 = styled(Image)`
-  min-width: 35rem;
-  max-width: 45rem;
-
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
 `;
 
 const ImageSlider = styled.div`
   position: relative;
   overflow: hidden;
+  height:20rem;
+  }
   &:hover {
     ${StyledImage2} {
+      transition: all 0.3s ease-in;
       filter: brightness(50%);
       transform: scale(1.1);
+
     }
     & .zoom {
       opacity: 0.8;

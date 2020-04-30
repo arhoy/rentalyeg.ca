@@ -32,7 +32,13 @@ export const VirtualTour = ({ src }) => {
         <CustomH2 className="centered">Virtual Tours</CustomH2>
       </TitleContainer>
       <Container>
-        <iframe src={src} frameborder="0" allowfullscreen allow="vr"></iframe>
+        <iframe
+          title="iframe-vt"
+          src={src}
+          frameborder="0"
+          allowfullscreen
+          allow="vr"
+        ></iframe>
       </Container>
     </Section>
   );

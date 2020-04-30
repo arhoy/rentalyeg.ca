@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { graphql, useStaticQuery } from 'gatsby';
+
 import { FaPlus } from 'react-icons/fa';
 import {
   StyledImage2,

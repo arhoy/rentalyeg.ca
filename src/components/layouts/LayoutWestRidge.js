@@ -125,11 +125,12 @@ const LayoutWestRidge = ({ children, full }) => {
       },
       phone: {
         title: '780.306.2335',
-        url: 'tel:123-456-7890',
+        url: 'tel:780-306-2335',
       },
       fb: {
         title: 'www.facebook.com',
-        url: 'https://www.facebook.com/',
+        url:
+          'https://www.facebook.com/pages/category/Apartment---Condo-Building/Westpark-Ridge-Community-102976637840998/',
       },
       insta: {
         title: 'www.instagram.com',

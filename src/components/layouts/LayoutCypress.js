@@ -101,14 +101,14 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutRentalYEG = ({ children, full }) => {
+const LayoutCypress = ({ children, full }) => {
   const bodyColor = 'white';
   const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+    address: '11920 102 St NW, Edmonton, AB T5G 2G4',
     phone: '780-306-2335',
-    name: 'Rental YEG',
-    slug: '/rental-yeg',
-    slogan: 'Modern Affordable Housing',
+    name: 'Cypress Manor',
+    slug: '/cypress-manor',
+    slogan: 'Spacious living',
     links: {
       contact: {
         title: 'Contact Us',
@@ -186,11 +186,11 @@ const LayoutRentalYEG = ({ children, full }) => {
     </>
   );
 };
-LayoutRentalYEG.propTypes = {
+LayoutCypress.propTypes = {
   full: PropTypes.bool,
 };
-LayoutRentalYEG.defaultProps = {
+LayoutCypress.defaultProps = {
   full: true,
 };
 
-export default LayoutRentalYEG;
+export default LayoutCypress;

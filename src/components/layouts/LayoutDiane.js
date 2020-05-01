@@ -101,14 +101,14 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutRentalYEG = ({ children, full }) => {
+const LayoutDiane = ({ children, full }) => {
   const bodyColor = 'white';
   const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+    address: '11035 124 Street NW, Edmonton AB T5M 0J5',
     phone: '780-306-2335',
-    name: 'Rental YEG',
-    slug: '/rental-yeg',
-    slogan: 'Modern Affordable Housing',
+    name: 'Diane Manor',
+    slug: '/diane-manor',
+    slogan: 'Diane Manor in North Edmonton',
     links: {
       contact: {
         title: 'Contact Us',
@@ -128,7 +128,8 @@ const LayoutRentalYEG = ({ children, full }) => {
       },
       fb: {
         title: 'www.facebook.com',
-        url: 'https://www.facebook.com/rentalyegca-107507547455122',
+        url:
+          'https://www.facebook.com/LiveTreo-Rental-Communities-111380130328006/',
       },
       insta: {
         title: 'www.instagram.com',
@@ -186,11 +187,11 @@ const LayoutRentalYEG = ({ children, full }) => {
     </>
   );
 };
-LayoutRentalYEG.propTypes = {
+LayoutDiane.propTypes = {
   full: PropTypes.bool,
 };
-LayoutRentalYEG.defaultProps = {
+LayoutDiane.defaultProps = {
   full: true,
 };
 
-export default LayoutRentalYEG;
+export default LayoutDiane;

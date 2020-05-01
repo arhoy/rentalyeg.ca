@@ -101,14 +101,14 @@ const FullFooterLayout = styled.footer`
   grid-column: full-start/full-end;
 `;
 
-const LayoutRentalYEG = ({ children, full }) => {
+const LayoutPinecrest = ({ children, full }) => {
   const bodyColor = 'white';
   const communityData = {
-    address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
+    address: '10975 84 Street NW, Edmonton AB T5H 1M5',
     phone: '780-306-2335',
-    name: 'Rental YEG',
-    slug: '/rental-yeg',
-    slogan: 'Modern Affordable Housing',
+    name: 'Pinecrest',
+    slug: '/pinecrest',
+    slogan: 'Pinecrest Manor',
     links: {
       contact: {
         title: 'Contact Us',
@@ -128,7 +128,7 @@ const LayoutRentalYEG = ({ children, full }) => {
       },
       fb: {
         title: 'www.facebook.com',
-        url: 'https://www.facebook.com/rentalyegca-107507547455122',
+        url: 'https://www.facebook.com/',
       },
       insta: {
         title: 'www.instagram.com',
@@ -186,11 +186,11 @@ const LayoutRentalYEG = ({ children, full }) => {
     </>
   );
 };
-LayoutRentalYEG.propTypes = {
+LayoutPinecrest.propTypes = {
   full: PropTypes.bool,
 };
-LayoutRentalYEG.defaultProps = {
+LayoutPinecrest.defaultProps = {
   full: true,
 };
 
-export default LayoutRentalYEG;
+export default LayoutPinecrest;

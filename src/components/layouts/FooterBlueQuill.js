@@ -155,7 +155,7 @@ const FooterBlueQuille = () => {
                 >
                   <FaFacebookF className="socialIcons" />
                 </SocialIcon>
-                <SocialIcon
+                {/* <SocialIcon
                   href={`https://www.instagram.com/`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -168,7 +168,7 @@ const FooterBlueQuille = () => {
                   rel="noopener noreferrer"
                 >
                   <FaTwitter className="socialIcons" />
-                </SocialIcon>
+                </SocialIcon> */}
               </SocialIconContainer>
             </LinkContainers>
           </LinkColumnContainers>

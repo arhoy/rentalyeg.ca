@@ -115,6 +115,30 @@ const Button = styled(ButtonStyle2)`
   }
 `;
 
+const LinkContainer = styled.div`
+  & ${ButtonContainer} {
+    margin: 1rem;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  & button {
+    outline: none;
+    border: none;
+    padding: 0.9rem 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    background: ${props => props.theme.colors.orange};
+    &:hover {
+      background: ${props => props.theme.colors.lightOrange};
+    }
+  }
+`;
+
 export const Property1 = ({ property }) => {
   return (
     <Container>
@@ -187,9 +211,17 @@ export const Property4 = ({ property }) => {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </Blurb>
-      <ButtonContainer to="/rental-yeg">
-        <Button className="orange">Take a Tour</Button>
-      </ButtonContainer>
+      <LinkContainer>
+        <ButtonContainer to="/diane-manor">
+          <button> Diane Manor </button>
+        </ButtonContainer>
+        <ButtonContainer to="/cypress-manor">
+          <button> Cypress Manor </button>
+        </ButtonContainer>
+        <ButtonContainer to="/pinecrest">
+          <button> Pinecrest </button>
+        </ButtonContainer>
+      </LinkContainer>
     </Container>
   );
 };

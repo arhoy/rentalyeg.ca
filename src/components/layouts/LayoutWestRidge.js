@@ -108,7 +108,7 @@ const LayoutWestRidge = ({ children, full }) => {
 
   const communityData = {
     address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
-    phone: '780-306-2335',
+    phone: '780-306-2337',
     name: 'Westpark Ridge',
     slug: '/westpark-ridge',
     slogan: 'West Park Ridge townhomes for rent in West Edmonton',
@@ -132,8 +132,8 @@ const LayoutWestRidge = ({ children, full }) => {
         url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
-        title: '780.306.2335',
-        url: 'tel:780-306-2335',
+        title: '780-306-2337',
+        url: 'tel:780-306-2337',
       },
       fb: {
         title: 'www.facebook.com',

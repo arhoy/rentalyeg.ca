@@ -124,8 +124,8 @@ const LayoutBlueQuillPoint = ({ children, full }) => {
         url: 'https://bqp.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
-        title: '780.306.2335',
-        url: 'tel:780-306-2335',
+        title: '780-809-9660',
+        url: 'tel:780-809-9660',
       },
       fb: {
         title: 'www.facebook.com',

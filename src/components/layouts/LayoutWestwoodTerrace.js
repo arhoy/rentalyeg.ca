@@ -106,7 +106,7 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
 
   const communityData = {
     address: '75 Woodsmere Close | Fort Saskatchewan AB T8L-0C8',
-    phone: '780-306-2335',
+    phone: '780-992-0243',
     name: 'Westwood Terrace',
     slug: '/westwood-terrace',
     slogan: 'Westwood Terrace Condominium Rental in Fort Saskatchewan',

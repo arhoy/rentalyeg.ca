@@ -130,8 +130,8 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
         url: 'https://wwt.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
-        title: '780.306.2335',
-        url: 'tel:780-306-2335',
+        title: '780-992-0243',
+        url: 'tel:780-992-0243',
       },
       fb: {
         title: 'www.facebook.com',

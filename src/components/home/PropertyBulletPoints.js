@@ -3,17 +3,16 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   display: flex;
-
-  @media (max-width: ${props => props.theme.screenSize.mobileL}) {
-    display: grid;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
+  align-item: center;
 `;
 
 const Ul = styled.ul`
-  max-width: 30rem;
-  margin: 2rem auto;
+  font-size: 1.5rem;
 
-  font-size: 1.4rem;
+  min-width: 25rem;
+  margin: 1rem;
   font-weight: bold;
   opacity: 0.85;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
@@ -22,8 +21,15 @@ const Ul = styled.ul`
   & li {
     color: ${props => props.theme.colors.secondary};
     margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
     & span {
       color: ${props => props.theme.colors.black};
+      margin-left: 1rem;
     }
   }
 `;

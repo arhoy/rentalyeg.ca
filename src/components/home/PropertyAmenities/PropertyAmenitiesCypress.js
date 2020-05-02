@@ -47,7 +47,7 @@ const Container = styled.div`
   padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
+
   grid-gap: 1rem;
 
   @media (max-width: ${props => props.theme.screenSize.oneThousand}) {

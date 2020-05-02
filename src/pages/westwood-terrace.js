@@ -8,7 +8,6 @@ import {
   SectionGrey,
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
-import PropertyAmenities from '../components/home/PropertyAmenities';
 
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
@@ -17,6 +16,7 @@ import { Section0 } from '../components/_wwt/Section0/_Section0';
 import PropertyGallery from '../components/home/PropertyGallery';
 import LayoutWestWoodTerrace from '../components/layouts/LayoutWestwoodTerrace';
 import { VirtualTour } from '../components/virualTours/VirtualTour';
+import { PropertyAmenitiesWWT } from '../components/home/PropertyAmenities/PropertyAmenitiesWWT';
 
 export const query = graphql`
   {
@@ -98,7 +98,7 @@ const WestWoodTerrace = ({ data }) => {
       </Section>
       <SectionGrey>
         <Container1200>
-          <PropertyAmenities property={property} />
+          <PropertyAmenitiesWWT property={property} />
         </Container1200>
       </SectionGrey>
       <Section>

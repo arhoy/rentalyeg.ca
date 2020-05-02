@@ -10,13 +10,13 @@ import {
   SectionGrey,
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
-import PropertyAmenities from '../components/home/PropertyAmenities';
 
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
 import { Section0 } from '../components/_ryeg/Section0/_Section0';
 
 import PropertyGallery from '../components/home/PropertyGallery';
+import { PropertyAmenitiesCypress } from '../components/home/PropertyAmenities/PropertyAmenitiesCypress';
 
 export const query = graphql`
   {
@@ -98,7 +98,7 @@ const CypressManor = ({ data }) => {
       </Section>
       <SectionGrey>
         <Container1200>
-          <PropertyAmenities property={property} />
+          <PropertyAmenitiesCypress property={property} />
         </Container1200>
       </SectionGrey>
       <Section>

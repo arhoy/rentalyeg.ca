@@ -10,7 +10,6 @@ import {
   SectionGrey,
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
-import PropertyAmenities from '../components/home/PropertyAmenities';
 
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
@@ -96,11 +95,7 @@ const RentalYEG = ({ data }) => {
           <PropertyInfo property={property} />
         </Container1200>
       </Section>
-      <SectionGrey>
-        <Container1200>
-          <PropertyAmenities property={property} />
-        </Container1200>
-      </SectionGrey>
+
       <Section>
         <PropertyGallery property={property} />
       </Section>

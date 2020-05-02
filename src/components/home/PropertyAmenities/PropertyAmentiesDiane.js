@@ -12,9 +12,9 @@ import {
   FaCat,
   FaSun,
 } from 'react-icons/fa';
-import { H2Centered } from '../reusableStyles/typography/Typography';
-import { Container1200 } from '../reusableStyles/sections/Sections';
-import { PropertyBulletPoints } from './PropertyBulletPoints';
+import { H2Centered } from '../../reusableStyles/typography/Typography';
+import { Container1200 } from '../../reusableStyles/sections/Sections';
+import { PropertyBulletPoints } from '../PropertyBulletPoints';
 
 const pulse = keyframes`
 from {
@@ -47,7 +47,7 @@ const Container = styled.div`
   padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
+
   grid-gap: 1rem;
 
   @media (max-width: ${props => props.theme.screenSize.oneThousand}) {
@@ -93,7 +93,7 @@ const Blurb = styled.div`
   }
 `;
 
-const PropertyAmenities = ({ property }) => {
+export const PropertyAmenitiesDiane = ({ property }) => {
   return (
     <>
       <Container1200>
@@ -105,34 +105,11 @@ const PropertyAmenities = ({ property }) => {
       <Container>
         <Unit>
           <IconContainer>
-            <FaUtensils />
-          </IconContainer>
-          <h4> {property.section2list[0] && property.section2list[0]} </h4>
-        </Unit>
-        <Unit>
-          <IconContainer>
             <FaKey />
           </IconContainer>
           <h4> {property.section2list[1] && property.section2list[1]} </h4>
         </Unit>
-        <Unit>
-          <IconContainer>
-            <FaSnowflake />
-          </IconContainer>
-          <h4> {property.section2list[2] && property.section2list[2]} </h4>
-        </Unit>
-        <Unit>
-          <IconContainer>
-            <FaWheelchair />
-          </IconContainer>
-          <h4> {property.section2list[3] && property.section2list[3]} </h4>
-        </Unit>
-        <Unit>
-          <IconContainer>
-            <FaSun />
-          </IconContainer>
-          <h4> {property.section2list[4] && property.section2list[4]} </h4>
-        </Unit>
+
         <Unit>
           <IconContainer>
             <FaLeaf />
@@ -156,5 +133,3 @@ const PropertyAmenities = ({ property }) => {
     </>
   );
 };
-
-export default PropertyAmenities;

@@ -10,7 +10,6 @@ import {
   SectionGrey,
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
-import PropertyAmenities from '../components/home/PropertyAmenities';
 
 import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
@@ -18,6 +17,7 @@ import { Section0 } from '../components/_bcp/Section0/_Section0';
 
 import PropertyGallery from '../components/home/PropertyGallery';
 import { VirtualTour } from '../components/virualTours/VirtualTour';
+import { PropertyAmenitiesBPQ } from '../components/home/PropertyAmenities/PropertyAmenitiesBQP';
 
 export const query = graphql`
   {
@@ -99,7 +99,7 @@ const BlueQuillPointe = ({ data }) => {
       </Section>
       <SectionGrey>
         <Container1200>
-          <PropertyAmenities property={property} />
+          <PropertyAmenitiesBPQ property={property} />
         </Container1200>
       </SectionGrey>
       <Section>

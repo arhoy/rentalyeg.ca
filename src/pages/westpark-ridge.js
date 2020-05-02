@@ -108,11 +108,11 @@ const WestRidge = ({ data }) => {
       <Section style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=NAfyFcNPHTp'} />
       </Section>
-      <SectionGrey>
+      {/* <SectionGrey>
         <Container1200>
           <PropertyReview property={property} />
         </Container1200>
-      </SectionGrey>
+      </SectionGrey> */}
       <Section>
         <Container1200>
           <Map1

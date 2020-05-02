@@ -104,6 +104,8 @@ const FullFooterLayout = styled.footer`
 const LayoutWestRidge = ({ children, full }) => {
   const bodyColor = 'white';
 
+  const phoneColor = 'white';
+
   const communityData = {
     address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
     phone: '780-306-2335',
@@ -181,7 +183,7 @@ const LayoutWestRidge = ({ children, full }) => {
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <FooterCommunity data={communityData} />
+            <FooterCommunity data={communityData} phoneColor={phoneColor} />
           </FooterLayout>
         </ThemeProvider>
       )}

@@ -182,7 +182,10 @@ const Attribution = styled.p`
   text-transform: uppercase;
 `;
 
-const FooterCommunity = ({ data, color }) => {
+const FooterCommunity = props => {
+  const data = props.data;
+  console.log('data is', props);
+  const color = props.color;
   return (
     <Container>
       <Menu>
@@ -194,7 +197,10 @@ const FooterCommunity = ({ data, color }) => {
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
               <LinkHeadersPrimary color={color}>
-                <a href={data.links.phone.url}> {data.links.phone.title}</a>
+                <a style={{ color: 'white' }} href={data.links.phone.url}>
+                  {' '}
+                  {data.links.phone.title}
+                </a>
               </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
@@ -235,20 +241,6 @@ const FooterCommunity = ({ data, color }) => {
                 >
                   <FaFacebookF className="socialIcons" />
                 </SocialIcon>
-                {/* <SocialIcon
-                  href={data.links.insta.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram className="socialIcons" />
-                </SocialIcon>
-                <SocialIcon
-                  href={data.links.fb.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitter className="socialIcons" />
-                </SocialIcon> */}
               </SocialIconContainer>
             </LinkContainers>
           </LinkColumnContainers>

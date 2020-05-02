@@ -108,11 +108,11 @@ const WestWoodTerrace = ({ data }) => {
         <VirtualTour src={'https://my.matterport.com/show/?m=4oZki9FV7Ju'} />
       </Section>
 
-      <SectionGrey>
+      {/* <SectionGrey>
         <Container1200>
           <PropertyReview property={property} />
         </Container1200>
-      </SectionGrey>
+      </SectionGrey> */}
       <Section>
         <Container1200>
           <Map1

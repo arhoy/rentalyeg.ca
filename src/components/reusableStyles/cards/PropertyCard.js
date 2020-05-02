@@ -35,7 +35,10 @@ const SubContainer = styled.div`
   }
   & span,
   h4 {
-    grid-column: 2/-1;
+    grid-column: 1/-1;
+    &::before {
+      content: '-';
+    }
   }
 `;
 
@@ -45,9 +48,8 @@ export const PropertyCard = ({ blurb, img, user, position }) => {
       <p>{blurb}</p>
 
       <SubContainer className="users">
-        <img alt={``} src={img} />
         <h4>{user}</h4>
-        <span>{position}</span>
+        {/* <span>{position}</span> */}
       </SubContainer>
     </Container>
   );

@@ -69,7 +69,7 @@ const PropertyReview = ({ property }) => {
                     review.childContentfulCommunityReviewsDescriptionTextNode
                       .description
                   }
-                  img={review.reviewImage.fluid.src}
+                  img={review.image && review.reviewImage.fluid.src}
                   user={review.reviewerName}
                   position={review.reviewerPosition}
                 />

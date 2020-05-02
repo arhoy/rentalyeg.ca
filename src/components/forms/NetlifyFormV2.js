@@ -230,9 +230,7 @@ const NetlifyFormV2 = ({ title, color, background }) => {
         </Row>
 
         <Field>
-          <Button color={color} type="submit">
-            Send Your Message
-          </Button>
+          <Button type="submit">Send Your Message</Button>
         </Field>
       </Form>
     </Container>

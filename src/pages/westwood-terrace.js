@@ -9,7 +9,6 @@ import {
 } from '../components/reusableStyles/sections/Sections';
 import PropertyInfo from '../components/home/PropertyInfo';
 
-import PropertyReview from '../components/home/PropertyReview';
 import Map1 from '../components/mapbox/Map1';
 import { Section0 } from '../components/_wwt/Section0/_Section0';
 
@@ -108,11 +107,6 @@ const WestWoodTerrace = ({ data }) => {
         <VirtualTour src={'https://my.matterport.com/show/?m=4oZki9FV7Ju'} />
       </Section>
 
-      {/* <SectionGrey>
-        <Container1200>
-          <PropertyReview property={property} />
-        </Container1200>
-      </SectionGrey> */}
       <Section>
         <Container1200>
           <Map1

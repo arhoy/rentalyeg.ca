@@ -35,8 +35,8 @@ export const VirtualTour = ({ src }) => {
         <iframe
           title="iframe-vt"
           src={src}
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           allow="vr"
         ></iframe>
       </Container>

@@ -109,7 +109,13 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
     phone: '780-306-2335',
     name: 'Westwood Terrace',
     slug: '/westwood-terrace',
-    slogan: 'Modern Affordable Housing',
+    slogan: 'Westwood Terrace Condominium Rental in Fort Saskatchewan',
+    // styles: {
+    //   footer: {
+    //     phoneColor: 'white',
+    //     heading: 'white',
+    //   },
+    // },
     links: {
       contact: {
         title: 'Contact Us',
@@ -181,7 +187,7 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
             <Main>{children}</Main>
           </DivFixed>
           <FooterLayout>
-            <FooterCommunity data={communityData} />
+            <FooterCommunity data={communityData} color="white" />
           </FooterLayout>
         </ThemeProvider>
       )}

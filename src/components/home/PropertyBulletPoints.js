@@ -34,7 +34,7 @@ const Ul = styled.ul`
   }
 `;
 
-export const PropertyBulletPoints = ({ property }) => {
+export const PropertyBulletPoints = ({ property, color }) => {
   return (
     <Container>
       <Ul>

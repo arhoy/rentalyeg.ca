@@ -108,7 +108,7 @@ const LayoutCypress = ({ children, full }) => {
     phone: '780-306-2335',
     name: 'Cypress Manor',
     slug: '/cypress-manor',
-    slogan: 'Spacious living',
+    slogan: 'Spacious living at Cypress Manor',
     links: {
       contact: {
         title: 'Contact Us',

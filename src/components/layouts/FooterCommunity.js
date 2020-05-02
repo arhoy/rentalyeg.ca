@@ -185,7 +185,8 @@ const Attribution = styled.p`
 const FooterCommunity = props => {
   const data = props.data;
   console.log('data is', props);
-  const color = props.color;
+  const color =
+    (props.data.styles && props.data.styles.footer.phoneColor) || '';
   return (
     <Container>
       <Menu>
@@ -197,7 +198,7 @@ const FooterCommunity = props => {
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
               <LinkHeadersPrimary color={color}>
-                <a style={{ color: 'white' }} href={data.links.phone.url}>
+                <a style={{ color: color }} href={data.links.phone.url}>
                   {' '}
                   {data.links.phone.title}
                 </a>

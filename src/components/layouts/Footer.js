@@ -99,6 +99,9 @@ const LinkHeadersPrimary = styled(LinkHeaders)`
   font-size: 2.5rem;
   font-weight: 700;
   font-size: 3rem;
+  & a {
+    color: white;
+  }
 `;
 
 const CustomLinks = styled(NoStyleLink)`
@@ -127,7 +130,9 @@ const Footer = () => {
           <LinkColumnContainers>
             <LinkContainers>
               <LinkHeaders>Text Or Call</LinkHeaders>
-              <LinkHeadersPrimary>780.306.2335</LinkHeadersPrimary>
+              <LinkHeadersPrimary style={{ color: 'white' }}>
+                780.306.2335
+              </LinkHeadersPrimary>
             </LinkContainers>
             <LinkContainers>
               <CustomLinks to="/Home">Home</CustomLinks>

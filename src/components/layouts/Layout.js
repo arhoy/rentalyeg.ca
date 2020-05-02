@@ -16,6 +16,12 @@ const communityData = {
   name: 'Live Treo',
   slug: '/',
   slogan: 'Join Our Communities',
+  styles: {
+    footer: {
+      phoneColor: '#0371E3',
+      heading: '#0371E3',
+    },
+  },
   links: {
     contact: {
       title: 'Contact Us',

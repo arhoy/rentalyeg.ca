@@ -108,7 +108,7 @@ const LayoutPinecrest = ({ children, full }) => {
     phone: '780-306-2335',
     name: 'Pinecrest',
     slug: '/pinecrest',
-    slogan: 'Pinecrest Manor',
+    slogan: 'Pinecrest Manor Apartment Rentals Edmonton',
     links: {
       contact: {
         title: 'Contact Us',

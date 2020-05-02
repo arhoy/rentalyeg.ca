@@ -108,7 +108,7 @@ const LayoutDiane = ({ children, full }) => {
     phone: '780-306-2335',
     name: 'Diane Manor',
     slug: '/diane-manor',
-    slogan: 'Diane Manor in North Edmonton',
+    slogan: 'Diane Manor Inglewood Edmonton Rentals',
     links: {
       contact: {
         title: 'Contact Us',

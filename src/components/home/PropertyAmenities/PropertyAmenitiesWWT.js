@@ -128,7 +128,7 @@ export const PropertyAmenitiesWWT = ({ property }) => {
           <h4> Elevator in Building </h4>
         </Unit>
       </Container>
-      <PropertyBulletPoints property={property} />
+      <PropertyBulletPoints property={property} color="red" />
     </>
   );
 };

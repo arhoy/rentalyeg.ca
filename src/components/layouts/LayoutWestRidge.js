@@ -111,7 +111,13 @@ const LayoutWestRidge = ({ children, full }) => {
     phone: '780-306-2335',
     name: 'Westpark Ridge',
     slug: '/westpark-ridge',
-    slogan: 'Modern Affordable Housing',
+    slogan: 'West Park Ridge townhomes for rent in West Edmonton',
+    styles: {
+      footer: {
+        phoneColor: 'white',
+        heading: 'white',
+      },
+    },
     links: {
       contact: {
         title: 'Contact Us',

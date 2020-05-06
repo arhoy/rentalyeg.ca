@@ -78,6 +78,16 @@ const Blurb = styled.div`
   line-height: 26px;
 `;
 
+const BottomDiv = styled.div`
+  min-height: 10rem;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+`;
+
 const ButtonContainer = styled(NoStyleLink)`
   display: flex;
   justify-self: flex-end;
@@ -117,7 +127,7 @@ const Button = styled(ButtonStyle2)`
 
 const LinkContainer = styled.div`
   & ${ButtonContainer} {
-    margin: 1rem;
+    margin: 2px;
   }
   display: flex;
   justify-content: center;
@@ -152,9 +162,11 @@ export const Property1 = ({ property }) => {
         comfortable, quiet and peaceful living with an emphasis on providing
         positive customer service experiences.
       </Blurb>
-      <ButtonContainer to={`/${property.slug}`}>
-        <Button className="green">Take a Tour</Button>
-      </ButtonContainer>
+      <BottomDiv>
+        <ButtonContainer to={`/${property.slug}`}>
+          <Button className="green">Take a Tour</Button>
+        </ButtonContainer>
+      </BottomDiv>
     </Container>
   );
 };
@@ -172,9 +184,11 @@ export const Property2 = ({ property }) => {
         apartments. Residents enjoy the quiet, peaceful lifestyle of an adult
         oriented community.
       </Blurb>
-      <ButtonContainer to="/westwood-terrace">
-        <Button className="red">Take a Tour</Button>
-      </ButtonContainer>
+      <BottomDiv>
+        <ButtonContainer to="/westwood-terrace">
+          <Button className="red">Take a Tour</Button>
+        </ButtonContainer>
+      </BottomDiv>
     </Container>
   );
 };
@@ -191,9 +205,11 @@ export const Property3 = ({ property }) => {
         Patricia Heights than you will at Westpark Ridge. Westpark Ridge is a
         well-maintained complex with on-site management.
       </Blurb>
-      <ButtonContainer to="/westpark-ridge">
-        <Button className="blue">Take a Tour</Button>
-      </ButtonContainer>
+      <BottomDiv>
+        <ButtonContainer to="/westpark-ridge">
+          <Button className="blue">Take a Tour</Button>
+        </ButtonContainer>
+      </BottomDiv>
     </Container>
   );
 };
@@ -211,17 +227,25 @@ export const Property4 = ({ property }) => {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </Blurb>
-      <LinkContainer>
-        <ButtonContainer to="/diane-manor">
-          <button> Diane Manor </button>
-        </ButtonContainer>
-        <ButtonContainer to="/cypress-manor">
-          <button> Cypress Manor </button>
-        </ButtonContainer>
-        <ButtonContainer to="/pinecrest">
-          <button> Pinecrest </button>
-        </ButtonContainer>
-      </LinkContainer>
+      <BottomDiv>
+        <LinkContainer>
+          <ButtonContainer to="/diane-manor">
+            <button> Diane Manor </button>
+          </ButtonContainer>
+          <ButtonContainer to="/cypress-manor">
+            <button> Cypress Manor </button>
+          </ButtonContainer>
+          <ButtonContainer to="/pinecrest">
+            <button> Pinecrest </button>
+          </ButtonContainer>
+          <ButtonContainer to="/phillips-apartment">
+            <button> Phillips </button>
+          </ButtonContainer>
+          <ButtonContainer to="/sherwood-manor">
+            <button> Sherwood </button>
+          </ButtonContainer>
+        </LinkContainer>
+      </BottomDiv>
     </Container>
   );
 };

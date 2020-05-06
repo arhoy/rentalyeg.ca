@@ -64,6 +64,9 @@ const Blurb = styled.div`
 
   margin: 1rem;
 
+  display: flex;
+  min-height: 13rem;
+  align-items: flex-start;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;

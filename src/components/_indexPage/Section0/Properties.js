@@ -9,11 +9,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  max-width: 400px;
+  margin: 1rem;
   align-items: center;
   justify-content: space-between;
   background: white;
   padding-bottom: 4rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+`;
+
+const Container2 = styled(Container)`
+  grid-column: 1/-1;
 `;
 
 const ImageContainer = styled.div`
@@ -63,9 +69,8 @@ const Blurb = styled.div`
   width: 90%;
 
   margin: 1rem;
-
+  height: 170px;
   display: flex;
-  min-height: 13rem;
   align-items: flex-start;
   font-family: Montserrat;
   font-style: normal;
@@ -158,7 +163,7 @@ export const Property1 = ({ property }) => {
       <ImageContainer className="green">
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
-      <Logo />
+      {/* <Logo /> */}
       <Blurb>
         Resident by resident, we look to provide living space for the everyday
         person. At Blue Quill Pointe, we are committed to delivering
@@ -180,7 +185,7 @@ export const Property2 = ({ property }) => {
       <ImageContainer className="red">
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
-      <Logo />
+      {/* <Logo /> */}
       <Blurb>
         Originally constructed in 2008 to be sold as condominiums, Westwood
         Terrace offers one and two bedroom, large, condominium-quality
@@ -198,11 +203,11 @@ export const Property2 = ({ property }) => {
 
 export const Property3 = ({ property }) => {
   return (
-    <Container>
+    <Container2>
       <ImageContainer className="blue">
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
-      <Logo />
+      {/* <Logo /> */}
       <Blurb>
         You won't find better value in the highly sought-after community of
         Patricia Heights than you will at Westpark Ridge. Westpark Ridge is a
@@ -213,7 +218,7 @@ export const Property3 = ({ property }) => {
           <Button className="blue">Take a Tour</Button>
         </ButtonContainer>
       </BottomDiv>
-    </Container>
+    </Container2>
   );
 };
 
@@ -223,7 +228,7 @@ export const Property4 = ({ property }) => {
       <ImageContainer className="orange">
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
-      <Logo />
+      {/* <Logo /> */}
       <Blurb>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

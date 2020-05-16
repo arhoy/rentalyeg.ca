@@ -97,7 +97,7 @@ const DianeManor = ({ data }) => {
 
   return (
     <LayoutDiane>
-      <Section0 fluid={heroImageFluid} property={property} />
+      <Section0 noButton={true} fluid={heroImageFluid} property={property} />
 
       <Section>
         <Container1200>

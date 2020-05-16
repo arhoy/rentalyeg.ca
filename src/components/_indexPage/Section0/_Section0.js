@@ -4,13 +4,14 @@ import styled from '@emotion/styled';
 import { Property1, Property2, Property3, Property4 } from './Properties';
 
 const Container = styled.div`
-  max-width: ${props => props.theme.screenSize.oneThousand};
+  max-width: 1600px;
   margin: 0 auto;
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 2rem;
   justify-items: center;
+
   padding: 4rem 0;
   @media (max-width: ${props => props.theme.screenSize.mobileL}) {
     grid-template-columns: 1fr;
@@ -30,7 +31,7 @@ export const Section0 = ({ data }) => {
       <Property1 property={bqp} />
       <Property2 property={wwt} />
       <Property3 property={wpr} />
-      <Property4 property={ryeg} />
+      {/* <Property4 property={ryeg} /> */}
     </Container>
   );
 };

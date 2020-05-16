@@ -96,7 +96,7 @@ const PhillipsApartment = ({ data }) => {
 
   return (
     <LayoutPhillips>
-      <Section0 fluid={heroImageFluid} property={property} />
+      <Section0 noButton={true} fluid={heroImageFluid} property={property} />
 
       <Section>
         <Container1200>

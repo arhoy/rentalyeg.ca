@@ -113,7 +113,9 @@ export const Section0 = ({ fluid, property }) => {
           <address> {property.addressName} </address>
           <ButtonContainer>
             <Scroll.Link to="virtualTour" smooth={true} duration={500}>
-              <ButtonStyleWhiteHero>Take a Tour</ButtonStyleWhiteHero>
+              <ButtonStyleWhiteHero>
+                Go To 360 Virtual Tour
+              </ButtonStyleWhiteHero>
             </Scroll.Link>
           </ButtonContainer>
         </HeroContent>

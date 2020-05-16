@@ -110,9 +110,9 @@ export const Section0 = ({ fluid, property }) => {
         <HeroContent>
           <H1>{property.section0Title}</H1>
           <address> {property.addressName} </address>
-          <ButtonContainer>
+          {/* <ButtonContainer>
             <ButtonStyleWhiteHero>Take a Tour</ButtonStyleWhiteHero>
-          </ButtonContainer>
+          </ButtonContainer> */}
         </HeroContent>
       </HeroContentContainer>
     </HeroBackgroundImage>

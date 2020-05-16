@@ -97,7 +97,7 @@ const CypressManor = ({ data }) => {
 
   return (
     <LayoutCypress>
-      <Section0 fluid={heroImageFluid} property={property} />
+      <Section0 noButton={true} fluid={heroImageFluid} property={property} />
 
       <Section>
         <Container1200>

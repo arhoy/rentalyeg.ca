@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 import BackgroundImage from 'gatsby-background-image';
+import * as Scroll from 'react-scroll';
+
 import { H1 } from '../../reusableStyles/typography/Typography';
 import { ButtonStyleWhiteHero } from '../../reusableStyles/buttons/Button';
 
@@ -114,7 +116,11 @@ export const Section0 = ({ fluid, property }) => {
           <H1>{property.section0Title}</H1>
           <address> {property.addressName} </address>
           <ButtonContainer>
-            <ButtonStyleWhiteHero>Take a Tour</ButtonStyleWhiteHero>
+            <Scroll.Link to="virtualTourWWT" smooth={true} duration={500}>
+              <ButtonStyleWhiteHero>
+                Go To 360 Virtual Tour
+              </ButtonStyleWhiteHero>
+            </Scroll.Link>
           </ButtonContainer>
         </HeroContent>
       </HeroContentContainer>

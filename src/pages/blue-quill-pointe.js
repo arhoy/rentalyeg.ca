@@ -25,6 +25,14 @@ export const query = graphql`
       nodes {
         slug
         title
+        communityData {
+          links {
+            applyNow {
+              url
+              title
+            }
+          }
+        }
         section0heroImage {
           fluid {
             ...GatsbyContentfulFluid_withWebp
@@ -106,7 +114,7 @@ const BlueQuillPointe = ({ data }) => {
         <PropertyGallery property={property} />
       </Section>
 
-      <Section style={{ paddingTop: '0' }}>
+      <Section id="virtualTourBQP" style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=paGZncmFHVg'} />
       </Section>
       <SectionGrey>

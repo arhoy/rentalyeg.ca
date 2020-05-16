@@ -56,6 +56,14 @@ export const query = graphql`
             ...GatsbyContentfulFluid_withWebp
           }
         }
+        communityData {
+          links {
+            applyNow {
+              url
+              title
+            }
+          }
+        }
         section3galleryTitle
         section3gallerySubtitle
         section4reviewsTitle

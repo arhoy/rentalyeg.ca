@@ -72,6 +72,14 @@ export const query = graphql`
             }
           }
         }
+        communityData {
+          links {
+            applyNow {
+              url
+              title
+            }
+          }
+        }
         section5locationTitle
         section5locationSubtitle
         section5mapCoordinates {

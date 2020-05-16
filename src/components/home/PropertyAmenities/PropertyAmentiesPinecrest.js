@@ -3,11 +3,10 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
 import {
-  FaUtensils,
+  FaSocks,
   FaKey,
   FaSnowflake,
   FaWheelchair,
-  FaLeaf,
   FaSmoking,
   FaCat,
   FaSun,
@@ -119,9 +118,9 @@ export const PropertyAmenitiesPinecrest = ({ property }) => {
 
         <Unit>
           <IconContainer>
-            <FaUtensils />
+            <FaSocks />
           </IconContainer>
-          <h4> Fridge Stove </h4>
+          <h4> In-Suite Laundry </h4>
         </Unit>
         <Unit>
           <IconContainer>

@@ -15,6 +15,7 @@ import NoStyleLink from '../Links/NoStyleLink';
 import { BLOCKS } from '@contentful/rich-text-types';
 // RICH TEXT
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { A } from '../reusableStyles/typography/Typography';
 
 // styled p
 const ArticleP = styled.p`
@@ -28,6 +29,8 @@ const ArticleP = styled.p`
 const Text = ({ children }) => <ArticleP>{children}</ArticleP>;
 
 const PropertyInfo = ({ property }) => {
+  console.log('prioperty is ', property);
+
   const { json } = property.section1blurb;
 
   const options = {
@@ -47,7 +50,9 @@ const PropertyInfo = ({ property }) => {
         <main>{documentToReactComponents(json, options)}</main>
 
         <CustomButton>
-          <NoStyleLink to="/contact">Get Details</NoStyleLink>
+          <A href={property.communityData.links.applyNow.url}>
+            {property.communityData.links.applyNow.title}
+          </A>
         </CustomButton>
       </BlurbContainer>
     </Container>

@@ -172,7 +172,7 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
             <FullNavLayout>
               <CommunityNav data={communityData}></CommunityNav>
             </FullNavLayout>
-            <MainFull>{children}</MainFull>
+            <MainFull globalData={communityData}>{children}</MainFull>
             <FullFooterLayout>
               <FooterCommunity data={communityData} />
             </FullFooterLayout>
@@ -184,7 +184,7 @@ const LayoutWestWoodTerrace = ({ children, full }) => {
             <CommunityNav data={communityData}></CommunityNav>
           </NavLayout>
           <DivFixed>
-            <Main>{children}</Main>
+            <Main globalData={communityData}>{children}</Main>
           </DivFixed>
           <FooterLayout>
             <FooterCommunity data={communityData} color="white" />

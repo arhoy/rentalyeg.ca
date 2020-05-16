@@ -184,7 +184,7 @@ const Attribution = styled.p`
 
 const FooterCommunity = props => {
   const data = props.data;
-  console.log('data is', props);
+
   const color =
     (props.data.styles && props.data.styles.footer.phoneColor) || '';
   return (

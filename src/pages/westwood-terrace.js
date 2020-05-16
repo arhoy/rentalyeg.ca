@@ -28,6 +28,14 @@ export const query = graphql`
             ...GatsbyContentfulFluid_withWebp
           }
         }
+        communityData {
+          links {
+            applyNow {
+              url
+              title
+            }
+          }
+        }
         section0Title
         addressName
         section1subtitle
@@ -82,8 +90,10 @@ export const query = graphql`
   }
 `;
 
-const WestWoodTerrace = ({ data }) => {
-  const property = data.allContentfulCommunity.nodes[0];
+const WestWoodTerrace = props => {
+  console.log('data is', props);
+  const property = props.data.allContentfulCommunity.nodes[0];
+
   const heroImageFluid = property.section0heroImage.fluid;
 
   return (
@@ -103,7 +113,7 @@ const WestWoodTerrace = ({ data }) => {
       <Section>
         <PropertyGallery property={property} />
       </Section>
-      <Section style={{ paddingTop: '0' }}>
+      <Section id="virtualTourWWT" style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=4oZki9FV7Ju'} />
       </Section>
 

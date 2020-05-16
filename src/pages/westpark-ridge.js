@@ -30,6 +30,14 @@ export const query = graphql`
             ...GatsbyContentfulFluid_withWebp
           }
         }
+        communityData {
+          links {
+            applyNow {
+              url
+              title
+            }
+          }
+        }
         section0Title
         addressName
         section1subtitle
@@ -105,7 +113,7 @@ const WestRidge = ({ data }) => {
       <Section>
         <PropertyGallery property={property} />
       </Section>
-      <Section style={{ paddingTop: '0' }}>
+      <Section id="virtualTour" style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=NAfyFcNPHTp'} />
       </Section>
       {/* <SectionGrey>

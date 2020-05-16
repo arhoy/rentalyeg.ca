@@ -3,11 +3,8 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
 import {
-  FaUtensils,
   FaKey,
-  FaSnowflake,
-  FaWheelchair,
-  FaLeaf,
+  FaSocks,
   FaSmoking,
   FaCat,
   FaTree,
@@ -125,7 +122,7 @@ export const PropertyAmenitiesBPQ = ({ property }) => {
 
         <Unit>
           <IconContainer>
-            <FaTree />
+            <FaSocks />
           </IconContainer>
           <h4> Laundry </h4>
         </Unit>

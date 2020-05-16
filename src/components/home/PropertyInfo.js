@@ -48,12 +48,13 @@ const PropertyInfo = ({ property }) => {
         <CustomH2>{property.section1title} </CustomH2>
 
         <main>{documentToReactComponents(json, options)}</main>
-
-        <CustomButton>
-          <A href={property.communityData.links.applyNow.url}>
-            {property.communityData.links.applyNow.title}
-          </A>
-        </CustomButton>
+        {property.communityData && (
+          <CustomButton>
+            <A href={property.communityData.links.applyNow.url}>
+              {property.communityData.links.applyNow.title}
+            </A>
+          </CustomButton>
+        )}
       </BlurbContainer>
     </Container>
   );

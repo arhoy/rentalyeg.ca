@@ -164,6 +164,7 @@ export const Property1 = ({ property }) => {
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
       {/* <Logo /> */}
+      <h2>Blue Quill Pointe</h2>
       <Blurb>
         Resident by resident, we look to provide living space for the everyday
         person. At Blue Quill Pointe, we are committed to delivering
@@ -186,6 +187,7 @@ export const Property2 = ({ property }) => {
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
       {/* <Logo /> */}
+      <h2>Westwood Terrace</h2>
       <Blurb>
         Originally constructed in 2008 to be sold as condominiums, Westwood
         Terrace offers one and two bedroom, large, condominium-quality
@@ -208,6 +210,7 @@ export const Property3 = ({ property }) => {
         <PropertyImage fluid={property.section0heroImage.fluid} />
       </ImageContainer>
       {/* <Logo /> */}
+      <h2>Westpark Ridge</h2>
       <Blurb>
         You won't find better value in the highly sought-after community of
         Patricia Heights than you will at Westpark Ridge. Westpark Ridge is a

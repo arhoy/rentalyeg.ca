@@ -123,7 +123,7 @@ const LayoutPhillips = ({ children, full }) => {
         url: 'https://bqp.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
-        title: '780-306-2337',
+        title: '780.306.2337',
         url: 'tel:780-306-2337',
       },
       fb: {

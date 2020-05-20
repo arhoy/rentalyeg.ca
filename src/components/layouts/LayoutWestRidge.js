@@ -132,7 +132,7 @@ const LayoutWestRidge = ({ children, full }) => {
         url: 'https://wpr.managebuilding.com/Resident/apps/rentalapp/',
       },
       phone: {
-        title: '780-306-2337',
+        title: '780.306.2337',
         url: 'tel:780-306-2337',
       },
       fb: {

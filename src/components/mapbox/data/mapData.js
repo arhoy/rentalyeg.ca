@@ -17,7 +17,7 @@ const storeLocations = [
   },
   {
     name: 'West Park Ridge',
-    address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
+    address: '7715 159 St NW, Edmonton, AB T5R 5X5',
     coordinates: {
       lat: 53.5099279,
       long: -113.5970134,

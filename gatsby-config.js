@@ -12,9 +12,9 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   siteMetadata: {
-    title: 'Rental YEG',
+    title: 'LiveTreo',
     description:
-      'Rental YEG is the place for affordable amazing apartment rentals',
+      'LiveTreo is the place for affordable amazing apartment rentals',
     author: 'Alex Quasar',
     twitterUsername: '@_RentalYEG',
     image: '/default.png',

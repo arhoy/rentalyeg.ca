@@ -39,6 +39,7 @@ export const query = graphql`
           }
         }
         section0Title
+        section0Subtitle
         addressName
         section1subtitle
         section1title

@@ -16,6 +16,7 @@ import PropertyGallery from '../components/home/PropertyGallery';
 import LayoutWestWoodTerrace from '../components/layouts/LayoutWestwoodTerrace';
 import { VirtualTour } from '../components/virualTours/VirtualTour';
 import { PropertyAmenitiesWWT } from '../components/home/PropertyAmenities/PropertyAmenitiesWWT';
+import PropertyReview from '../components/home/PropertyReview';
 
 export const query = graphql`
   {
@@ -37,6 +38,7 @@ export const query = graphql`
           }
         }
         section0Title
+        section0Subtitle
         addressName
         section1subtitle
         section1title
@@ -116,7 +118,11 @@ const WestWoodTerrace = props => {
       <Section id="virtualTourWWT" style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=4oZki9FV7Ju'} />
       </Section>
-
+      <SectionGrey>
+        <Container1200>
+          <PropertyReview property={property} />
+        </Container1200>
+      </SectionGrey>
       <Section>
         <Container1200>
           <Map1

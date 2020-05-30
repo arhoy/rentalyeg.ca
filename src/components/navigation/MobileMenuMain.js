@@ -151,7 +151,7 @@ export const MobileMenuMain = ({ data }) => {
         <CustomLink to={data.links.home.url}>
           {data.links.home.title}
         </CustomLink>
-        <CustomLink to={'/about'}>About</CustomLink>
+        {/* <CustomLink to={'/about'}>About</CustomLink> */}
         <CustomALink
           target="_blank"
           href={data.links.contact.url}

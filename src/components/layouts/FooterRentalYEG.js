@@ -181,7 +181,7 @@ const FooterRentalYEG = () => {
           rel="noopener noreferrer"
           href="https://rentalyeg.com/"
         >
-          Rental YEG {d} &copy;
+          LiveTreo {d} &copy;
         </A>
       </Attribution>
     </Container>

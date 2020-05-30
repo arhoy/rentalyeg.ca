@@ -107,7 +107,7 @@ const LayoutWestRidge = ({ children, full }) => {
   const phoneColor = 'white';
 
   const communityData = {
-    address: '7715 159 St NW, Edmonton, AB T5R 5X5, Canada',
+    address: '7715 159 St NW, Edmonton, AB T5R 5X5',
     phone: '780-306-2337',
     name: 'Westpark Ridge',
     slug: '/westpark-ridge',

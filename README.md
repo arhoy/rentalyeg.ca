@@ -1,3 +1,3 @@
-# Rental YEG
+# LiveTreo
 
-## Rental YEG website. Find an affordable place to rent in Edmonton today
+## LiveTreo website. Find an affordable place to rent in Edmonton today

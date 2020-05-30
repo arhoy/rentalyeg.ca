@@ -106,7 +106,7 @@ const LayoutRentalYEG = ({ children, full }) => {
   const communityData = {
     address: ' 11615 28 Ave NW, Edmonton, AB T6J 4G2',
     phone: '780-306-2335',
-    name: 'Rental YEG',
+    name: 'LiveTreo',
     slug: '/rental-yeg',
     slogan: 'Modern Affordable Housing',
     links: {

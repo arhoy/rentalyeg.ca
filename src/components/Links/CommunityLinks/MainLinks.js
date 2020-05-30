@@ -130,9 +130,9 @@ export const MainLinks = ({ data }) => {
         <CustomLink className="underline" to="/">
           Home
         </CustomLink>
-        <CustomLink className="underline" to="/about">
+        {/* <CustomLink className="underline" to="/about">
           About
-        </CustomLink>
+        </CustomLink> */}
         <CustomALink
           href={data.links.contact.url}
           target={'_blank'}

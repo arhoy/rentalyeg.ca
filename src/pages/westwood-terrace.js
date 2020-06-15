@@ -118,6 +118,12 @@ const WestWoodTerrace = props => {
       <Section id="virtualTourWWT" style={{ paddingTop: '0' }}>
         <VirtualTour src={'https://my.matterport.com/show/?m=4oZki9FV7Ju'} />
       </Section>
+      <Section id="virtualTourWWT" style={{ paddingTop: '0' }}>
+        <VirtualTour
+          hidden={true}
+          src={'https://my.matterport.com/show/?m=XzRMEUbD4S8'}
+        />
+      </Section>
       <SectionGrey>
         <Container1200>
           <PropertyReview property={property} />

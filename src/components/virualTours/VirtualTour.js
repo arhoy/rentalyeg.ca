@@ -24,13 +24,16 @@ const Container = styled.div`
   }
 `;
 
-export const VirtualTour = ({ src }) => {
+export const VirtualTour = ({ src, hidden }) => {
   return (
     <Section>
-      <TitleContainer>
-        <CustomH4>Come See Our</CustomH4>
-        <CustomH2 className="centered">Virtual Tours</CustomH2>
-      </TitleContainer>
+      {!hidden && (
+        <TitleContainer>
+          <CustomH4>Come See Our</CustomH4>
+          <CustomH2 className="centered">Virtual Tours</CustomH2>
+        </TitleContainer>
+      )}
+
       <Container>
         <iframe
           title="iframe-vt"
